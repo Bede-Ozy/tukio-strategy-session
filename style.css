@@ -2980,3 +2980,383 @@ body.is-fullscreen .app-header:hover {
   color: #FFFFFF;
   font-family: 'Outfit', sans-serif;
 }
+
+/* ==========================================================================
+   10. CARD DISCUSSION QUESTION (PROMINENT PROMPT CALLOUT)
+   ========================================================================== */
+.card-discussion-question {
+  background: rgba(255, 107, 0, 0.09);
+  border: 1px solid rgba(255, 107, 0, 0.32);
+  border-left: 5px solid var(--brand-orange);
+  padding: 14px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #FBBF24;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.32rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 4px 0 8px 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.card-discussion-question i {
+  color: var(--brand-orange);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+[data-theme="light"] .card-discussion-question {
+  background: rgba(255, 107, 0, 0.08);
+  border-color: rgba(255, 107, 0, 0.35);
+  color: #B45309;
+}
+
+/* ==========================================================================
+   11. JOURNEY 8 DIMENSIONS WITH DEBRIEF QUESTIONS
+   ========================================================================== */
+.journey-layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 18px;
+  justify-content: center;
+}
+
+.journey-eight-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.journey-debrief-container {
+  background: rgba(17, 24, 39, 0.75);
+  border: 1px solid rgba(255, 107, 0, 0.3);
+  border-radius: 16px;
+  padding: 16px 22px;
+  box-shadow: var(--shadow-premium);
+}
+
+.journey-debrief-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--brand-orange);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.journey-debrief-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.journey-debrief-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--slide-color);
+  line-height: 1.35;
+}
+
+.journey-debrief-card i {
+  color: var(--brand-orange);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ==========================================================================
+   12. THE CLOSING ROOM (4-CLIENT ACTIVITY WITH TIMER)
+   ========================================================================== */
+.closing-room-container {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 28px;
+  height: 100%;
+  align-items: stretch;
+}
+
+.closing-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.closing-client-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-premium);
+  transition: all 0.2s;
+}
+
+.closing-client-card:hover {
+  border-color: var(--brand-orange);
+  transform: translateY(-2px);
+}
+
+.client-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(255, 107, 0, 0.15);
+  color: var(--brand-orange);
+  border: 1px solid var(--brand-orange);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.client-objection {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+.client-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.client-step-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.12rem;
+  color: var(--text-muted);
+}
+
+.client-step-num {
+  color: var(--brand-orange);
+  font-weight: 900;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.closing-timer-col {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: var(--shadow-premium);
+}
+
+/* ==========================================================================
+   13. CUSTOMER JOURNEY WALK (7-STAGE PIPELINE & QUESTIONS)
+   ========================================================================== */
+.cj-walk-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cj-stages-pipeline {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.cj-stage-step {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-top: 4px solid var(--brand-orange);
+  border-radius: 12px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  transition: transform 0.2s;
+  box-shadow: var(--shadow-premium);
+}
+
+.cj-stage-step:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-orange);
+}
+
+.cj-stage-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--brand-orange);
+}
+
+.cj-stage-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.cj-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cj-question-card {
+  background: rgba(17, 24, 39, 0.65);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow-premium);
+}
+
+.cj-q-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--brand-orange);
+  letter-spacing: 0.05em;
+}
+
+.cj-q-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   14. THE TUKIO MONEY TREE
+   ========================================================================== */
+.money-tree-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  height: 100%;
+  align-items: stretch;
+}
+
+.money-branches-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.money-branch-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 5px solid #10B981;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-premium);
+  transition: transform 0.2s;
+}
+
+.money-branch-card:hover {
+  transform: translateX(4px);
+  border-color: #10B981;
+}
+
+.money-branch-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.money-branch-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.money-branch-desc {
+  font-size: 1.08rem;
+  color: var(--text-muted);
+}
+
+.money-tests-col {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+
+.money-tests-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FBBF24;
+}
+
+.money-test-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.money-test-letter {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #FBBF24;
+}
+
+.money-test-q {
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: var(--slide-color);
+  line-height: 1.35;
+}

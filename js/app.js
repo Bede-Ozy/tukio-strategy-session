@@ -109,6 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", scaleSlide);
   scaleSlide();
 
+  // Sync All button count labels dynamically
+  const allBtn = document.querySelector("#session-nav [data-session='all']");
+  if (allBtn) allBtn.textContent = `All (${slides.length})`;
+  const allChip = document.querySelector(".sidebar-filter-tabs [data-filter='all']");
+  if (allChip) allChip.textContent = `All (${slides.length})`;
+
   // 2. SLIDE RENDERER
   function renderSlide(index) {
     if (!slides || slides.length === 0) return;
@@ -192,6 +198,15 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       case "journey-points-8":
         renderJourneyPoints8(slide, containerEl);
+        break;
+      case "closing-room-activity":
+        renderClosingRoomActivity(slide, containerEl);
+        break;
+      case "customer-journey-walk":
+        renderCustomerJourneyWalk(slide, containerEl);
+        break;
+      case "money-tree-activity":
+        renderMoneyTreeActivity(slide, containerEl);
         break;
       case "start-stop-continue-interactive":
       case "start-stop-continue-headers":
@@ -387,7 +402,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Moments in the Journey (8 Cards: a to h)
+  // Moments in the Journey (8 Cards: a to h + Debrief Questions)
   function renderJourneyPoints8(slide, containerEl) {
     const cardsHtml = (slide.dimensions || []).map(d => `
       <div class="journey-dimension-card">
@@ -397,9 +412,29 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `).join("");
 
+    const debriefHtml = (slide.debriefQuestions && slide.debriefQuestions.length > 0) ? `
+      <div class="journey-debrief-container">
+        <div class="journey-debrief-header">
+          <i class="ri-question-answer-line"></i>
+          <span>Facilitator Debrief Questions</span>
+        </div>
+        <div class="journey-debrief-grid">
+          ${slide.debriefQuestions.map(q => `
+            <div class="journey-debrief-card">
+              <i class="ri-chat-voice-line"></i>
+              <span>"${q}"</span>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    ` : "";
+
     containerEl.innerHTML = `
-      <div class="journey-eight-container">
-        ${cardsHtml}
+      <div class="journey-layout-wrapper">
+        <div class="journey-eight-container">
+          ${cardsHtml}
+        </div>
+        ${debriefHtml}
       </div>
     `;
   }
@@ -690,6 +725,179 @@ document.addEventListener("DOMContentLoaded", () => {
     containerEl.innerHTML = `
       <div class="matrix-war-room-grid">
         ${headersHtml}
+      </div>
+    `;
+  }
+
+  // The Closing Room (4 Client Objections + 5-Minute Pair Roleplay Timer)
+  function renderClosingRoomActivity(slide, containerEl) {
+    const clientsHtml = (slide.clients || []).map(c => `
+      <div class="closing-client-card">
+        <span class="client-badge">${c.name}</span>
+        <h4 class="client-objection">"${c.objection}"</h4>
+        <div class="client-steps">
+          ${(slide.challengeSteps || []).map(s => `
+            <div class="client-step-row">
+              <span class="client-step-num">•</span>
+              <span>${s}</span>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `).join("");
+
+    containerEl.innerHTML = `
+      <div class="closing-room-container">
+        <div class="closing-clients-grid">
+          ${clientsHtml}
+        </div>
+        <div class="closing-timer-col">
+          <div class="timer-box" style="width: 100%;">
+            <div class="timer-label"><i class="ri-user-voice-line"></i> 5-Minute Pair Challenge</div>
+            <div class="timer-digits" id="closing-timer-digits">05:00</div>
+            <div class="timer-controls">
+              <button class="timer-action-btn" id="closing-btn-timer-toggle">
+                <i class="ri-play-fill" id="closing-timer-icon"></i> <span id="closing-timer-btn-text">Start Challenge</span>
+              </button>
+              <button class="timer-reset-btn" id="closing-btn-timer-reset">Reset</button>
+            </div>
+            <div style="margin-top: 18px; background: rgba(255, 107, 0, 0.08); border-left: 4px solid var(--brand-orange); padding: 12px 16px; border-radius: 8px; text-align: left;">
+              <span style="font-size: 0.82rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase;">Debrief Prompt</span>
+              <p style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-top: 4px;">"${slide.debrief || 'What worked? What can be improved?'}"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Hook timer for closing room
+    let closingTime = slide.timerSeconds || 300;
+    let closingInterval = null;
+    let isClosingRunning = false;
+
+    const btnToggle = document.getElementById("closing-btn-timer-toggle");
+    const btnReset = document.getElementById("closing-btn-timer-reset");
+    const digits = document.getElementById("closing-timer-digits");
+    const icon = document.getElementById("closing-timer-icon");
+    const btnText = document.getElementById("closing-timer-btn-text");
+
+    if (btnToggle) {
+      btnToggle.addEventListener("click", () => {
+        if (isClosingRunning) {
+          clearInterval(closingInterval);
+          closingInterval = null;
+          isClosingRunning = false;
+          if (icon) icon.className = "ri-play-fill";
+          if (btnText) btnText.textContent = "Start";
+        } else {
+          isClosingRunning = true;
+          if (icon) icon.className = "ri-pause-fill";
+          if (btnText) btnText.textContent = "Pause";
+          closingInterval = setInterval(() => {
+            if (closingTime > 0) {
+              closingTime--;
+              if (digits) digits.textContent = formatTime(closingTime);
+            } else {
+              clearInterval(closingInterval);
+              closingInterval = null;
+              isClosingRunning = false;
+              playChime();
+              if (icon) icon.className = "ri-play-fill";
+              if (btnText) btnText.textContent = "Restart";
+            }
+          }, 1000);
+        }
+      });
+    }
+
+    if (btnReset) {
+      btnReset.addEventListener("click", () => {
+        clearInterval(closingInterval);
+        closingInterval = null;
+        isClosingRunning = false;
+        closingTime = slide.timerSeconds || 300;
+        if (digits) digits.textContent = formatTime(closingTime);
+        if (icon) icon.className = "ri-play-fill";
+        if (btnText) btnText.textContent = "Start Challenge";
+      });
+    }
+  }
+
+  // Customer Journey Walk in My Shoes (7 Touchpoint Pipeline & 6 Reflection Questions)
+  function renderCustomerJourneyWalk(slide, containerEl) {
+    const stagesHtml = (slide.stages || []).map(st => `
+      <div class="cj-stage-step">
+        <span class="cj-stage-num">0${st.num}</span>
+        <h4 class="cj-stage-name">${st.name}</h4>
+      </div>
+    `).join("");
+
+    const questionsHtml = (slide.walkQuestions || []).map(q => `
+      <div class="cj-question-card">
+        <span class="cj-q-tag">${q.tag}</span>
+        <p class="cj-q-text">${q.q}</p>
+      </div>
+    `).join("");
+
+    const introHtml = slide.introNote ? `
+      <div style="background: rgba(255, 107, 0, 0.08); border: 1px solid rgba(255, 107, 0, 0.28); border-left: 4px solid var(--brand-orange); padding: 12px 20px; border-radius: 10px; margin-bottom: 12px;">
+        <span style="font-size: 0.82rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase;">Introductory Note</span>
+        <p style="font-size: 1.25rem; font-weight: 600; color: var(--slide-color); margin-top: 4px;">${slide.introNote}</p>
+      </div>
+    ` : "";
+
+    containerEl.innerHTML = `
+      <div class="cj-walk-container">
+        ${introHtml}
+        <div class="cj-stages-pipeline">
+          ${stagesHtml}
+        </div>
+        <div class="cj-questions-grid">
+          ${questionsHtml}
+        </div>
+      </div>
+    `;
+  }
+
+  // The TUKIO Money Tree (What Else Can Tukio Sell?)
+  function renderMoneyTreeActivity(slide, containerEl) {
+    const branchesHtml = (slide.branches || []).map(b => `
+      <div class="money-branch-card">
+        <div class="money-branch-icon">
+          <i class="${b.icon}"></i>
+        </div>
+        <div>
+          <h4 class="money-branch-title">${b.title}</h4>
+          <p class="money-branch-desc">${b.desc}</p>
+        </div>
+      </div>
+    `).join("");
+
+    const testsHtml = (slide.evaluationQuestions || []).map(t => `
+      <div class="money-test-card">
+        <span class="money-test-letter">${t.letter}.</span>
+        <span class="money-test-q">${t.q}</span>
+      </div>
+    `).join("");
+
+    containerEl.innerHTML = `
+      <div class="money-tree-container">
+        <div class="money-branches-col">
+          <div style="font-family: 'Outfit'; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; color: #10B981; margin-bottom: 2px; display: flex; align-items: center; gap: 8px;">
+            <i class="ri-node-tree"></i> Value Branches to Offer Our Clients
+          </div>
+          ${branchesHtml}
+        </div>
+        <div class="money-tests-col">
+          <div class="money-tests-header">
+            <i class="ri-checkbox-multiple-line"></i>
+            <span>4 Evaluation Questions</span>
+          </div>
+          <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.4;">
+            Before committing to a new service branch, the leadership team must answer these 4 tests:
+          </p>
+          ${testsHtml}
+        </div>
       </div>
     `;
   }
