@@ -630,30 +630,28 @@ body.is-fullscreen .app-header:hover {
   position: absolute;
   bottom: 24px;
   left: 50%;
-  transform: translateX(-50%) translateY(4px);
+  transform: translateX(-50%) translateY(0);
   display: flex;
   align-items: center;
   gap: 18px;
-  background: rgba(17, 24, 39, 0.88);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 24, 39, 0.9);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   padding: 8px 24px;
   border-radius: 40px;
-  z-index: 40;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  
-  /* Blurred out until slide or controls are hovered */
-  opacity: 0.18;
-  filter: blur(5px);
-  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0.88;
+  filter: none;
+  pointer-events: auto;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
 }
 
-.presentation-container:hover .controls-overlay,
 .controls-overlay:hover,
 .controls-overlay.active-control {
   opacity: 1;
-  filter: blur(0px);
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
 }
 
 .control-btn {

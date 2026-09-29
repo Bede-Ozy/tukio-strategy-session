@@ -907,11 +907,11 @@ document.addEventListener("DOMContentLoaded", () => {
     startTimer();
   };
 
-  btnTimerModal.addEventListener("click", () => timerModal.classList.add("active"));
-  btnCloseTimerModal.addEventListener("click", () => timerModal.classList.remove("active"));
-  headerTimerBadge.addEventListener("click", () => timerModal.classList.add("active"));
-  modalBtnStart.addEventListener("click", toggleTimer);
-  modalBtnReset.addEventListener("click", () => resetTimer(300));
+  if (btnTimerModal) btnTimerModal.addEventListener("click", () => timerModal && timerModal.classList.add("active"));
+  if (btnCloseTimerModal) btnCloseTimerModal.addEventListener("click", () => timerModal && timerModal.classList.remove("active"));
+  if (headerTimerBadge) headerTimerBadge.addEventListener("click", () => timerModal && timerModal.classList.add("active"));
+  if (modalBtnStart) modalBtnStart.addEventListener("click", toggleTimer);
+  if (modalBtnReset) modalBtnReset.addEventListener("click", () => resetTimer(300));
 
   // --------------------------------------------------------------------------
   // FULLSCREEN & AUTO-EXPAND ENGINE WITH TOP-NAV HOVER REVEAL
@@ -1008,42 +1008,46 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentIndex < slides.length - 1) renderSlide(currentIndex + 1);
   }
 
-  btnPrev.addEventListener("click", prevSlide);
-  btnNext.addEventListener("click", nextSlide);
+  if (btnPrev) btnPrev.addEventListener("click", prevSlide);
+  if (btnNext) btnNext.addEventListener("click", nextSlide);
 
-  btnPlay.addEventListener("click", () => {
-    isAutoplayActive = !isAutoplayActive;
-    if (isAutoplayActive) {
-      playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
-      autoplayInterval = setInterval(() => {
-        if (currentIndex < slides.length - 1) nextSlide();
-        else {
-          clearInterval(autoplayInterval);
-          isAutoplayActive = false;
-          playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-        }
-      }, 7000);
-    } else {
-      clearInterval(autoplayInterval);
-      playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-    }
-  });
+  if (btnPlay) {
+    btnPlay.addEventListener("click", () => {
+      isAutoplayActive = !isAutoplayActive;
+      if (isAutoplayActive) {
+        if (playIcon) playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+        autoplayInterval = setInterval(() => {
+          if (currentIndex < slides.length - 1) nextSlide();
+          else {
+            clearInterval(autoplayInterval);
+            isAutoplayActive = false;
+            if (playIcon) playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+          }
+        }, 7000);
+      } else {
+        clearInterval(autoplayInterval);
+        if (playIcon) playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+      }
+    });
+  }
 
-  btnNotes.addEventListener("click", toggleNotes);
-  btnCloseNotes.addEventListener("click", () => notesDrawer.classList.remove("active"));
+  if (btnNotes) btnNotes.addEventListener("click", toggleNotes);
+  if (btnCloseNotes) btnCloseNotes.addEventListener("click", () => notesDrawer && notesDrawer.classList.remove("active"));
 
-  btnToggleSidebar.addEventListener("click", openSidebar);
-  btnCloseSidebar.addEventListener("click", closeSidebar);
-  sidebarOverlay.addEventListener("click", closeSidebar);
+  if (btnToggleSidebar) btnToggleSidebar.addEventListener("click", openSidebar);
+  if (btnCloseSidebar) btnCloseSidebar.addEventListener("click", closeSidebar);
+  if (sidebarOverlay) sidebarOverlay.addEventListener("click", closeSidebar);
 
-  btnTheme.addEventListener("click", () => {
-    currentTheme = (currentTheme === "dark") ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", currentTheme);
-    btnTheme.innerHTML = (currentTheme === "dark") ? '<i class="ri-sun-line"></i>' : '<i class="ri-moon-line"></i>';
-  });
+  if (btnTheme) {
+    btnTheme.addEventListener("click", () => {
+      currentTheme = (currentTheme === "dark") ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", currentTheme);
+      btnTheme.innerHTML = (currentTheme === "dark") ? '<i class="ri-sun-line"></i>' : '<i class="ri-moon-line"></i>';
+    });
+  }
 
   document.addEventListener("keydown", (e) => {
-    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+    if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
 
     switch (e.key) {
       case "ArrowRight":
