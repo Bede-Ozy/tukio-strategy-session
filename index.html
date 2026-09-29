@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tukio Konsults Limited 2026 Strategy Session Presentation Deck - Facilitated by Shamzbridge Consult Limited.">
+  <title>Tukio Konsults Limited - 2026 Strategy Session Deck</title>
+  
+  <!-- Design System Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Hover Trigger Area for Fullscreen Nav Reveal -->
+  <div class="top-nav-hover-zone" id="top-nav-hover-zone"></div>
+
+  <!-- Floating Left Vertical Action Dock -->
+  <aside class="floating-left-dock" id="floating-left-dock" aria-label="Presentation Tools">
+    <button class="dock-btn" id="btn-toggle-sidebar" title="Session Agenda (M)" aria-label="Open Session Agenda">
+      <i class="ri-menu-unfold-line"></i>
+    </button>
+    <div class="dock-divider"></div>
+    <button class="dock-btn" id="btn-timer-modal" title="Discussion Timer" aria-label="Discussion Timer">
+      <i class="ri-timer-2-line"></i>
+    </button>
+    <button class="dock-btn" id="btn-notes" title="Facilitator Speaker Notes (N)" aria-label="Speaker Notes">
+      <i class="ri-file-user-line"></i>
+    </button>
+    <button class="dock-btn" id="btn-theme" title="Toggle Theme (T)" aria-label="Toggle Theme">
+      <i class="ri-sun-line"></i>
+    </button>
+    <button class="dock-btn" id="btn-fullscreen" title="Toggle Fullscreen (F)" aria-label="Toggle Fullscreen">
+      <i class="ri-fullscreen-line"></i>
+    </button>
+  </aside>
+
+  <!-- Top Session Navigation Bar -->
+  <header class="app-header" id="app-header">
+    <!-- Quick Session Navigator (Aligned with Official Agenda) -->
+    <nav class="deck-selector" id="session-nav">
+      <button class="session-btn active" data-session="all">All (21)</button>
+      <button class="session-btn" data-session="Agenda">Agenda</button>
+      <button class="session-btn" data-session="Energiser">Energiser</button>
+      <button class="session-btn" data-session="The Journey">Journey</button>
+      <button class="session-btn" data-session="Mentorship">Mr. Bankole</button>
+      <button class="session-btn" data-session="Health Check">SWOT</button>
+      <button class="session-btn" data-session="Ownership">Mr. Folarin</button>
+      <button class="session-btn" data-session="Revenue">Ms Jumoke</button>
+      <button class="session-btn" data-session="Retention">Mr Shams</button>
+      <button class="session-btn" data-session="Branding">Branding</button>
+      <button class="session-btn" data-session="Expansion">Expansion</button>
+      <button class="session-btn" data-session="War Room">War Room</button>
+      <button class="session-btn" data-session="Closing">Closing</button>
+    </nav>
+  </header>
+
+  <!-- Left Agenda Sidebar & Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="agenda-sidebar" id="agenda-sidebar" aria-label="Session Navigation Drawer">
+    <div class="sidebar-header">
+      <h2><i class="ri-list-check-2" style="color: var(--brand-orange);"></i> Strategy Agenda</h2>
+      <button class="sidebar-close-btn" id="btn-close-sidebar" aria-label="Close Sidebar">&times;</button>
+    </div>
+    
+    <div class="sidebar-filter-tabs">
+      <button class="filter-chip active" data-filter="all">All (21)</button>
+      <button class="filter-chip" data-filter="The Journey">Journey</button>
+      <button class="filter-chip" data-filter="Mentorship">Mentorship</button>
+      <button class="filter-chip" data-filter="Health Check">Health Check</button>
+      <button class="filter-chip" data-filter="Revenue">Revenue</button>
+      <button class="filter-chip" data-filter="Retention">Retention</button>
+      <button class="filter-chip" data-filter="Branding">Branding</button>
+      <button class="filter-chip" data-filter="War Room">War Room</button>
+    </div>
+
+    <div class="sidebar-slides-list" id="sidebar-slides-list">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </aside>
+
+  <!-- Central Presentation Canvas -->
+  <main class="presentation-container" id="presentation-container">
+    <div class="slide-canvas" id="slide-canvas">
+      
+      <!-- 1920x1080 Scaled Stage with Orange Frame -->
+      <section class="slide-wrapper" id="slide-wrapper">
+        
+        <!-- Slide Upper Header -->
+        <header class="slide-header" id="slide-header-el">
+          <div class="slide-header-left">
+            <span class="slide-category" id="slide-category">SESSION 1: OPENING & EXPECTATIONS</span>
+            <h2 class="slide-title" id="slide-title">Setting Our Ambition for Today</h2>
+            <p class="slide-subtitle" id="slide-subtitle" style="display: none;"></p>
+          </div>
+          <div class="slide-header-right">
+            <img src="images/tukio_logo.jpg" alt="Tukio Konsults" class="slide-header-logo tukio-header-logo">
+            <div class="slide-header-divider"></div>
+            <img src="images/shamzbridge-logo.png" alt="Shamzbridge Consult" class="slide-header-logo">
+          </div>
+        </header>
+
+        <!-- Dynamic Layout Content Area -->
+        <div class="slide-body" id="slide-body">
+          <!-- Slide Layout Renders Here via app.js -->
+        </div>
+
+        <!-- Optional Slide Takeaway Bar: Extra Footer Content at Bottom of Slide Canvas -->
+        <div class="slide-takeaway-bar" id="slide-takeaway-el" style="display: none;">
+          <span class="takeaway-badge">KEY TAKEAWAY</span>
+          <span class="takeaway-text" id="slide-takeaway-text"></span>
+        </div>
+
+        <!-- Slide Footer -->
+        <footer class="slide-footer" id="slide-footer-el">
+          <div class="slide-footer-left">
+            <span class="slide-footer-logo-text">TUKIO KONSULTS LIMITED</span>
+            <span class="slide-footer-divider">|</span>
+            <span id="footer-session-text">2026 Strategy Session</span>
+          </div>
+          <div class="slide-footer-right">
+            <span id="slide-number">Slide 1 of 21</span>
+          </div>
+        </footer>
+
+      </section>
+
+      <!-- Bottom Floating Controls Overlay -->
+      <nav class="controls-overlay" id="controls-panel" aria-label="Slide player controls">
+        <button class="control-btn" id="btn-prev" title="Previous Slide (ArrowLeft)" aria-label="Go to previous slide">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button class="control-btn" id="btn-play" title="Auto-play presentation (P)" aria-label="Auto play slideshow">
+          <svg viewBox="0 0 24 24" id="play-icon"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <button class="control-btn" id="btn-next" title="Next Slide (ArrowRight / Space)" aria-label="Go to next slide">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+        
+        <div class="slide-indicator" id="slide-indicator">1 / 21</div>
+        
+        <div class="progress-bar-container" id="progress-container" title="Presentation progress">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Sliding Facilitator Speaker Notes Drawer -->
+  <aside class="speaker-notes-drawer" id="speaker-notes-drawer" aria-label="Facilitator Speaker Notes">
+    <div class="speaker-notes-header">
+      <h3><i class="ri-file-user-line"></i> Facilitator Working Guide</h3>
+      <button class="speaker-notes-close" id="btn-close-notes" title="Close Notes (Esc)">&times;</button>
+    </div>
+    <div class="speaker-notes-body" id="speaker-notes-content">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- Interactive Discussion Timer Modal -->
+  <div class="timer-modal" id="timer-modal">
+    <div class="timer-modal-card">
+      <button class="timer-modal-close" id="btn-close-timer-modal">&times;</button>
+      <h3 style="font-family: 'Outfit'; font-size: 1.8rem; color: var(--brand-orange); margin-bottom: 8px;">
+        <i class="ri-timer-line"></i> Strategy Breakout Timer
+      </h3>
+      <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 25px;">
+        Keep pair discussions and team brainstorms focused and on time.
+      </p>
+
+      <div class="timer-digits" id="modal-timer-digits" style="margin-bottom: 25px;">05:00</div>
+
+      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 25px;">
+        <button class="filter-chip" onclick="setTimerPreset(120)">2 Mins</button>
+        <button class="filter-chip active" onclick="setTimerPreset(300)">5 Mins (Pairs)</button>
+        <button class="filter-chip" onclick="setTimerPreset(600)">10 Mins (Squads)</button>
+        <button class="filter-chip" onclick="setTimerPreset(900)">15 Mins</button>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 15px;">
+        <button class="timer-action-btn" id="modal-btn-start">
+          <i class="ri-play-fill"></i> Start Timer
+        </button>
+        <button class="timer-reset-btn" id="modal-btn-reset">
+          <i class="ri-refresh-line"></i> Reset
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/slidesData.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
