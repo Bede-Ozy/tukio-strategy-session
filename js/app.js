@@ -299,11 +299,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Talking Points 3-Card Grid
   function renderTalkingPointsGrid(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
     const cardsHtml = (slide.cards || []).map(card => {
+      const learnHtml = card.thingsToLearn ? `
+        <div class="card-things-to-learn">
+          <div class="learn-header">
+            <i class="ri-lightbulb-line"></i>
+            <span>Things to Learn</span>
+          </div>
+          <p class="learn-text">${card.thingsToLearn}</p>
+        </div>
+      ` : "";
+
       const questionHtml = card.question ? `
         <div class="card-discussion-question">
-          <i class="ri-question-line"></i>
-          <span>${card.question}</span>
+          <div class="question-header">
+            <i class="ri-chat-voice-line"></i>
+            <span>Discussion Question</span>
+          </div>
+          <p class="question-text">${card.question}</p>
         </div>
       ` : "";
 
@@ -320,6 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <i class="${card.icon}"></i>
           </div>
           <h4 class="card-topic-title">${card.title}</h4>
+          ${learnHtml}
           ${questionHtml}
           <div class="card-points-list">
             ${ptsHtml}
@@ -329,8 +350,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }).join("");
 
     containerEl.innerHTML = `
-      <div class="talking-points-row">
-        ${cardsHtml}
+      <div class="talking-points-wrapper">
+        ${learnBannerHtml}
+        <div class="talking-points-row">
+          ${cardsHtml}
+        </div>
       </div>
     `;
   }
@@ -404,6 +428,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Moments in the Journey (8 Cards: a to h + Debrief Questions)
   function renderJourneyPoints8(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
     const cardsHtml = (slide.dimensions || []).map(d => `
       <div class="journey-dimension-card">
         <span class="dimension-letter">${d.letter}.</span>
@@ -431,6 +462,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     containerEl.innerHTML = `
       <div class="journey-layout-wrapper">
+        ${learnBannerHtml}
         <div class="journey-eight-container">
           ${cardsHtml}
         </div>
@@ -580,8 +612,16 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       }).join("");
 
+      const learnBannerHtml = slide.thingsToLearn ? `
+        <div class="slide-things-to-learn-banner">
+          <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+          <span class="slide-learn-text">${slide.thingsToLearn}</span>
+        </div>
+      ` : "";
+
       containerEl.innerHTML = `
         <div class="${containerClass}">
+          ${learnBannerHtml}
           <div class="${gridClass}">
             ${cardsHtml}
           </div>
@@ -714,6 +754,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Strategy War Room 10 Matrix Headers
   function renderMatrixFramework(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
     const headersHtml = (slide.matrixHeaders || []).map((h, i) => `
       <div class="matrix-header-card">
         <span class="matrix-header-num">${i + 1}</span>
@@ -723,14 +770,24 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join("");
 
     containerEl.innerHTML = `
-      <div class="matrix-war-room-grid">
-        ${headersHtml}
+      <div class="matrix-war-room-wrapper" style="display: flex; flex-direction: column; height: 100%; gap: 14px;">
+        ${learnBannerHtml}
+        <div class="matrix-war-room-grid">
+          ${headersHtml}
+        </div>
       </div>
     `;
   }
 
   // The Closing Room (4 Client Objections + 5-Minute Pair Roleplay Timer)
   function renderClosingRoomActivity(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
     const clientsHtml = (slide.clients || []).map(c => `
       <div class="closing-client-card">
         <span class="client-badge">${c.name}</span>
@@ -747,23 +804,26 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join("");
 
     containerEl.innerHTML = `
-      <div class="closing-room-container">
-        <div class="closing-clients-grid">
-          ${clientsHtml}
-        </div>
-        <div class="closing-timer-col">
-          <div class="timer-box" style="width: 100%;">
-            <div class="timer-label"><i class="ri-user-voice-line"></i> 5-Minute Pair Challenge</div>
-            <div class="timer-digits" id="closing-timer-digits">05:00</div>
-            <div class="timer-controls">
-              <button class="timer-action-btn" id="closing-btn-timer-toggle">
-                <i class="ri-play-fill" id="closing-timer-icon"></i> <span id="closing-timer-btn-text">Start Challenge</span>
-              </button>
-              <button class="timer-reset-btn" id="closing-btn-timer-reset">Reset</button>
-            </div>
-            <div style="margin-top: 18px; background: rgba(255, 107, 0, 0.08); border-left: 4px solid var(--brand-orange); padding: 12px 16px; border-radius: 8px; text-align: left;">
-              <span style="font-size: 0.82rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase;">Debrief Prompt</span>
-              <p style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-top: 4px;">"${slide.debrief || 'What worked? What can be improved?'}"</p>
+      <div class="closing-room-wrapper" style="display: flex; flex-direction: column; height: 100%; gap: 14px;">
+        ${learnBannerHtml}
+        <div class="closing-room-container">
+          <div class="closing-clients-grid">
+            ${clientsHtml}
+          </div>
+          <div class="closing-timer-col">
+            <div class="timer-box" style="width: 100%;">
+              <div class="timer-label"><i class="ri-user-voice-line"></i> 5-Minute Pair Challenge</div>
+              <div class="timer-digits" id="closing-timer-digits">05:00</div>
+              <div class="timer-controls">
+                <button class="timer-action-btn" id="closing-btn-timer-toggle">
+                  <i class="ri-play-fill" id="closing-timer-icon"></i> <span id="closing-timer-btn-text">Start Challenge</span>
+                </button>
+                <button class="timer-reset-btn" id="closing-btn-timer-reset">Reset</button>
+              </div>
+              <div style="margin-top: 18px; background: rgba(255, 107, 0, 0.08); border-left: 4px solid var(--brand-orange); padding: 12px 16px; border-radius: 8px; text-align: left;">
+                <span style="font-size: 0.82rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase;">Debrief Prompt</span>
+                <p style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-top: 4px;">"${slide.debrief || 'What worked? What can be improved?'}"</p>
+              </div>
             </div>
           </div>
         </div>
@@ -825,6 +885,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Customer Journey Walk in My Shoes (7 Touchpoint Pipeline & 6 Reflection Questions)
   function renderCustomerJourneyWalk(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
     const stagesHtml = (slide.stages || []).map(st => `
       <div class="cj-stage-step">
         <span class="cj-stage-num">0${st.num}</span>
@@ -848,6 +915,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     containerEl.innerHTML = `
       <div class="cj-walk-container">
+        ${learnBannerHtml}
         ${introHtml}
         <div class="cj-stages-pipeline">
           ${stagesHtml}
@@ -861,6 +929,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // The TUKIO Money Tree (What Else Can Tukio Sell?)
   function renderMoneyTreeActivity(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
     const branchesHtml = (slide.branches || []).map(b => `
       <div class="money-branch-card">
         <div class="money-branch-icon">
@@ -881,22 +956,25 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join("");
 
     containerEl.innerHTML = `
-      <div class="money-tree-container">
-        <div class="money-branches-col">
-          <div style="font-family: 'Outfit'; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; color: #10B981; margin-bottom: 2px; display: flex; align-items: center; gap: 8px;">
-            <i class="ri-node-tree"></i> Value Branches to Offer Our Clients
+      <div class="money-tree-wrapper" style="display: flex; flex-direction: column; height: 100%; gap: 14px;">
+        ${learnBannerHtml}
+        <div class="money-tree-container">
+          <div class="money-branches-col">
+            <div style="font-family: 'Outfit'; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; color: #10B981; margin-bottom: 2px; display: flex; align-items: center; gap: 8px;">
+              <i class="ri-node-tree"></i> Value Branches to Offer Our Clients
+            </div>
+            ${branchesHtml}
           </div>
-          ${branchesHtml}
-        </div>
-        <div class="money-tests-col">
-          <div class="money-tests-header">
-            <i class="ri-checkbox-multiple-line"></i>
-            <span>4 Evaluation Questions</span>
+          <div class="money-tests-col">
+            <div class="money-tests-header">
+              <i class="ri-checkbox-multiple-line"></i>
+              <span>4 Evaluation Questions</span>
+            </div>
+            <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.4;">
+              Before committing to a new service branch, the leadership team must answer these 4 tests:
+            </p>
+            ${testsHtml}
           </div>
-          <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.4;">
-            Before committing to a new service branch, the leadership team must answer these 4 tests:
-          </p>
-          ${testsHtml}
         </div>
       </div>
     `;

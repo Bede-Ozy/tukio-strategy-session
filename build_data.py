@@ -3,10 +3,11 @@ import json
 # Master Slide Dataset for Tukio Konsults Ltd - 2026 Strategy Session
 # Strictly aligned with the Official Lesson Note Plan & Strategy Agenda
 # Directives:
-# 1. Discussion-oriented: talking points, reflection cards, and prominent questions on slides.
-# 2. Pointers only, not heavy paragraphs.
-# 3. Clean structure with takeaways at bottom of slide canvas.
-# 4. Zero fabricated stories or assumed company histories.
+# 1. Before each discussion, clear "Things to Learn" for each sub-topic.
+# 2. Discussion-oriented: talking points, reflection cards, and prominent questions on slides.
+# 3. Pointers only, punchy and clear.
+# 4. Clean structure with takeaways at bottom of slide canvas.
+# 5. Zero fabricated stories or assumed company histories.
 
 slides = [
     {
@@ -62,6 +63,7 @@ slides = [
             {
                 "icon": "ri-user-voice-line",
                 "title": "Welcome Address",
+                "thingsToLearn": "Strategic alignment begins with psychological safety and an active commitment to speak openly across all levels.",
                 "question": "What is our shared mindset as we convene today?",
                 "points": [
                     "Opening remarks by Mrs. Fisayo Olabisi",
@@ -72,6 +74,7 @@ slides = [
             {
                 "icon": "ri-focus-3-line",
                 "title": "Purpose of the Workshop",
+                "thingsToLearn": "Strategy sessions are not routine meetings; they exist to diagnose reality and redefine our 5-year commercial trajectory.",
                 "question": "What core outcomes must we achieve by 6:00 PM?",
                 "points": [
                     "State the purpose and objectives of today's session",
@@ -82,6 +85,7 @@ slides = [
             {
                 "icon": "ri-compass-3-line",
                 "title": "Session Ground Rules",
+                "thingsToLearn": "Constructive friction drives breakthrough decisions—critique processes and systems rigorously while respecting every team member.",
                 "question": "How will we ensure candid, constructive debate?",
                 "points": [
                     "Active participation & open, honest contributions",
@@ -100,6 +104,7 @@ slides = [
         "title": "The Tukio Connection",
         "subtitle": "Group Activity: Participants pair up for 5 minutes",
         "layout": "energiser-activity",
+        "thingsToLearn": "A team cannot build the Tukio of our dreams without acknowledging what we already do exceptionally well and aligning on bold 12-month goals.",
         "timerSeconds": 300,
         "prompts": [
             {
@@ -133,6 +138,7 @@ slides = [
             {
                 "icon": "ri-checkbox-circle-line",
                 "title": "What Worked",
+                "thingsToLearn": "Sustainable growth comes from codifying and scaling the winning practices that consistently produce client delight and repeat business.",
                 "question": "What standout wins, winning approaches & client successes worked exceptionally well?",
                 "points": [
                     "Major milestone event deliveries and client-delighting moments",
@@ -144,6 +150,7 @@ slides = [
             {
                 "icon": "ri-arrow-up-circle-line",
                 "title": "What Can Be Improved",
+                "thingsToLearn": "Operational friction in handoffs and communication erodes profitability—streamlining workflows creates team speed and execution consistency.",
                 "question": "Where did we experience friction, and what operational workflows must be improved?",
                 "points": [
                     "Internal communication speed and inter-departmental handoffs",
@@ -155,6 +162,7 @@ slides = [
             {
                 "icon": "ri-close-circle-line",
                 "title": "What to Stop",
+                "thingsToLearn": "Deciding what to STOP is just as critical as deciding what to START—tolerating bad habits drains energy from strategic priorities.",
                 "question": "What bottlenecks, redundant habits & ineffective practices must we completely stop?",
                 "points": [
                     "Preventable operational mistakes and last-minute scrambles",
@@ -175,6 +183,7 @@ slides = [
         "title": "Moments in the Journey of Tukio Konsult",
         "subtitle": "Group Conversations: Let's share some moments in the journey of Tukio Konsult",
         "layout": "journey-points-8",
+        "thingsToLearn": "Moving forward with the best part of our past requires confronting difficult moments and mistakes with total honesty to extract lasting wisdom.",
         "dimensions": [
             {"letter": "a", "label": "Major Milestones"},
             {"letter": "b", "label": "Major Achievements"},
@@ -201,6 +210,7 @@ slides = [
         "title": "START | STOP | CONTINUE",
         "subtitle": "For us to achieve our overall objectives in 5 Years, here are things we MUST:",
         "layout": "start-stop-continue-interactive",
+        "thingsToLearn": "Achieving our 5-year targets demands ruthless focus: start high-leverage standards, stop time-wasting routines, and double down on core strengths.",
         "columns": [
             {
                 "id": "start",
@@ -245,6 +255,7 @@ slides = [
             {
                 "icon": "ri-dashboard-line",
                 "title": "Operational Objectives",
+                "thingsToLearn": "Operational excellence relies on documented checklists and predictable delivery standards, not individual memory or heroics.",
                 "question": "What immediate operational standards and delivery workflows must we set?",
                 "points": [
                     "Immediate service delivery standards and execution checklists",
@@ -255,6 +266,7 @@ slides = [
             {
                 "icon": "ri-line-chart-line",
                 "title": "Strategic Objectives",
+                "thingsToLearn": "Strategic targets bridge daily event coordination with multi-year institutional expansion and commercial resilience.",
                 "question": "What 5-year organizational growth and market milestones must we achieve?",
                 "points": [
                     "5-Year market positioning and regional expansion targets",
@@ -265,6 +277,7 @@ slides = [
             {
                 "icon": "ri-check-double-line",
                 "title": "Ownership & Tracking",
+                "thingsToLearn": "An objective without a single named owner and a strict review cadence will never be executed.",
                 "question": "Who owns each objective, and how will review cadence be structured?",
                 "points": [
                     "Assigned departmental and individual ownership for every objective",
@@ -288,6 +301,7 @@ slides = [
             {
                 "icon": "ri-global-line",
                 "title": "Business Environment Overview",
+                "thingsToLearn": "Macroeconomic shifts and corporate budget constraints require event firms to operate with lean overhead and high commercial agility.",
                 "question": "What macro economic shifts and business dynamics impact Tukio today?",
                 "points": [
                     "Current macroeconomic climate and market realities",
@@ -298,6 +312,7 @@ slides = [
             {
                 "icon": "ri-building-line",
                 "title": "Institutional Systems & Scaling",
+                "thingsToLearn": "To scale beyond the founder's personal capacity, Tukio must embed systems, governance, and delegated authority.",
                 "question": "How do we transition from founder-dependent operations to sustainable systems?",
                 "points": [
                     "Building resilient governance, operating structure & processes",
@@ -308,6 +323,7 @@ slides = [
             {
                 "icon": "ri-question-answer-line",
                 "title": "Post-Mentorship Plenary",
+                "thingsToLearn": "Mentorship produces real value only when insights are translated into concrete operational habits within our business.",
                 "question": "What critical lessons are we implementing directly into Tukio Konsult?",
                 "points": [
                     "a. What did we learn from Mr. Bankole's perspective?",
@@ -343,6 +359,7 @@ slides = [
             {
                 "icon": "ri-settings-4-line",
                 "title": "Operations & Delivery",
+                "thingsToLearn": "Operational health means zero surprises on event day—achieved through standardized vendor management and rigorous pre-event run-sheets.",
                 "question": "What is healthy, what is unhealthy, and what is the underlying problem in Operations?",
                 "points": [
                     "Event execution workflows and vendor coordination systems",
@@ -353,6 +370,7 @@ slides = [
             {
                 "icon": "ri-customer-service-2-line",
                 "title": "Sales, Marketing & CX",
+                "thingsToLearn": "Sales and customer experience are intertwined: how we sell sets expectations, and how we deliver determines repeat revenue.",
                 "question": "What is healthy, what is unhealthy, and what is the underlying problem in Sales & CX?",
                 "points": [
                     "Client pipeline, conversion rates & lead management",
@@ -363,6 +381,7 @@ slides = [
             {
                 "icon": "ri-bank-card-line",
                 "title": "Finance and Administration",
+                "thingsToLearn": "Cash flow is the lifeblood of consulting: prompt milestone invoicing and cost discipline protect business sustainability.",
                 "question": "What is healthy, what is unhealthy, and what is the underlying problem in Finance & Admin?",
                 "points": [
                     "Invoicing promptness, cash flow discipline & cost control",
@@ -382,6 +401,7 @@ slides = [
         "title": "Tukio SWOT Analysis",
         "subtitle": "Group Activity: Let's Discuss TUKIO's SWOT (Turn SWOT into Decisions)",
         "layout": "swot-board-interactive",
+        "thingsToLearn": "SWOT is not four boxes of sticky notes—it becomes valuable only when turned into decisions: leverage S, fix W, pursue O, and prepare for T.",
         "columns": [
             {
                 "id": "strengths",
@@ -435,6 +455,7 @@ slides = [
             {
                 "icon": "ri-user-shared-line",
                 "title": "Corporate Client Referrals",
+                "thingsToLearn": "The most cost-effective business development channel is warm referrals from existing corporate clients who trust our execution.",
                 "question": "How do we use existing relationships to generate corporate client referrals?",
                 "points": [
                     "Systematic post-event referral requests to corporate decision-makers",
@@ -445,6 +466,7 @@ slides = [
             {
                 "icon": "ri-list-ordered",
                 "title": "The Top 5 Strategic Issues",
+                "thingsToLearn": "Focus requires sacrifice: identifying the five vital strategic issues forces the leadership team to prioritize what truly moves the needle.",
                 "question": "\"If we can only address FIVE things from everything identified today, what should they be?\"",
                 "points": [
                     "Synthesizing department health checks and SWOT decisions",
@@ -455,6 +477,7 @@ slides = [
             {
                 "icon": "ri-target-line",
                 "title": "Strategic Focus & Alignment",
+                "thingsToLearn": "Every strategic priority must directly improve customer delight, streamline operations, or accelerate commercial revenue.",
                 "question": "What measurable impact will addressing these 5 issues unlock by 2027?",
                 "points": [
                     "Immediate reduction of internal operational friction",
@@ -478,6 +501,7 @@ slides = [
             {
                 "icon": "ri-alarm-warning-line",
                 "title": "When Things Go Wrong",
+                "thingsToLearn": "Under extreme event pressure, human instincts often default to panic or blame—recognizing this reaction is the first step to leadership control.",
                 "question": "\"When things go wrong at Tukio, what usually happens?\"",
                 "points": [
                     "Examining typical team reactions during high-pressure disruptions",
@@ -488,6 +512,7 @@ slides = [
             {
                 "icon": "ri-shield-check-line",
                 "title": "What Should Happen Instead",
+                "thingsToLearn": "High-performing teams de-escalate crises through calm containment, rapid problem-solving, and clear client-facing reassurance.",
                 "question": "\"What should happen instead when high-stress disruptions occur?\"",
                 "points": [
                     "Immediate composure, containment, and clear team communication",
@@ -498,6 +523,7 @@ slides = [
             {
                 "icon": "ri-heart-pulse-line",
                 "title": "The True Meaning of Ownership",
+                "thingsToLearn": "Ownership is not taking blame for everything—it is taking 100% responsibility for everything within your circle of influence.",
                 "question": "How do we cultivate extreme ownership across every Tukio project?",
                 "points": [
                     "Ownership is not taking blame for everything",
@@ -521,6 +547,7 @@ slides = [
             {
                 "icon": "ri-file-search-line",
                 "title": "Reflections & Obstacles",
+                "thingsToLearn": "Deals stall when clients sense uncertainty or perceive price without understanding the value and risk mitigation Tukio provides.",
                 "question": "\"What stood out for you, and what challenges have you experienced before this session?\"",
                 "points": [
                     "Where prospective client deals currently stall or drop off",
@@ -531,6 +558,7 @@ slides = [
             {
                 "icon": "ri-funds-line",
                 "title": "What Success Looks Like",
+                "thingsToLearn": "Sales success is not merely getting inquiries—it is qualifying serious buyers, shortening the sales cycle, and securing prompt payment.",
                 "question": "\"What does success look like, and what strategies recommend more revenue?\"",
                 "points": [
                     "High conversion rate from initial inquiry to signed contract",
@@ -541,6 +569,7 @@ slides = [
             {
                 "icon": "ri-stethoscope-line",
                 "title": "Diagnose Before You Prescribe",
+                "thingsToLearn": "A good salesperson doesn't rush to present a solution; they diagnose before they prescribe to uncover the client's true priorities.",
                 "question": "How do we deeply diagnose client pain points before presenting a solution?",
                 "points": [
                     "A good salesperson doesn't rush to present a solution",
@@ -560,6 +589,7 @@ slides = [
         "title": "The Closing Room",
         "subtitle": "Group Activity: Divide into pairs • One person is Tukio, the other is Client • 5-Minute Challenge",
         "layout": "closing-room-activity",
+        "thingsToLearn": "Objections are requests for clarity and value demonstration—never drop price without adjusting scope or terms.",
         "timerSeconds": 300,
         "clients": [
             {
@@ -613,6 +643,7 @@ slides = [
         "title": "Customer Experience is the Whole Journey",
         "subtitle": "Objective: Understand how organization behaviour, operations & activities affect customers",
         "layout": "customer-journey-walk",
+        "thingsToLearn": "Customer experience spans all 7 touchpoints from discovery to post-event follow-up—every touchpoint speaks volumes about Tukio.",
         "introNote": "Getting a customer is one achievement; getting customers to: a. Return, b. Recommend Tukio, c. Trust Tukio for Bigger Jobs is another level of business success.",
         "stages": [
             {"num": 1, "name": "Discovery"},
@@ -646,6 +677,7 @@ slides = [
             {
                 "icon": "ri-compass-discover-line",
                 "title": "Experience Debrief",
+                "thingsToLearn": "Customer churn occurs where friction goes unnoticed; retention happens when deliberate moments of delight exceed expectations.",
                 "question": "\"Where are we currently creating friction, and where are we creating delight?\"",
                 "points": [
                     "Identify touchpoints where clients experience anxiety or delays",
@@ -656,6 +688,7 @@ slides = [
             {
                 "icon": "ri-user-heart-line",
                 "title": "Retention Strategies (1 to 5)",
+                "thingsToLearn": "The first 72 hours after an event determine whether a client becomes a repeat partner or forgets the relationship.",
                 "question": "How do we maintain active relationships immediately after events?",
                 "points": [
                     "1. Follow up immediately after events",
@@ -668,6 +701,7 @@ slides = [
             {
                 "icon": "ri-repeat-2-line",
                 "title": "Retention Strategies (6 to 9)",
+                "thingsToLearn": "Don't let the relationship end when the invoice is paid—formal referral mechanisms and ongoing corporate check-ins build recurring retainers.",
                 "question": "How do we turn past clients into referring advocates and annual retainers?",
                 "points": [
                     "6. Offer loyalty incentives where appropriate",
@@ -692,6 +726,7 @@ slides = [
             {
                 "icon": "ri-global-line",
                 "title": "Brand Perception Plenary",
+                "thingsToLearn": "Our brand is not our logo—it is the perception people have based on experiences. When brand promise matches delivery, authority scales.",
                 "question": "\"What's your satisfaction rate with Tukio's Brand Identities (Website & Social Media)?\"",
                 "points": [
                     "Our brand is not our logo — a logo is just an identity element",
@@ -703,6 +738,7 @@ slides = [
             {
                 "icon": "ri-question-mark",
                 "title": "\"Why Choose Tukio?\"",
+                "thingsToLearn": "Corporate clients choose event partners who demonstrate proven competence, reduce risk, and understand their organizational objectives.",
                 "question": "\"Imagine a client received proposals from 5 event companies. Why choose Tukio?\"",
                 "points": [
                     "Who are we?",
@@ -715,6 +751,7 @@ slides = [
             {
                 "icon": "ri-award-line",
                 "title": "Crafting Our Value Proposition",
+                "thingsToLearn": "A compelling value proposition answers who we serve, what unique outcome we guarantee, and why clients can trust us completely.",
                 "question": "How do we craft a compelling Value Proposition to wrap our brand around?",
                 "points": [
                     "Articulating our distinct value in 1-2 clear sentences",
@@ -738,6 +775,7 @@ slides = [
             {
                 "icon": "ri-share-forward-line",
                 "title": "Marketing Channels Review",
+                "thingsToLearn": "Marketing is getting the right message to the right people through the right channels at the right time—focus on channels that generate revenue.",
                 "question": "\"Which channels have generated the most revenue, and which do we strengthen, stop, or start?\"",
                 "points": [
                     "Instagram, LinkedIn, WhatsApp & Targeted Email",
@@ -748,6 +786,7 @@ slides = [
             {
                 "icon": "ri-calendar-event-line",
                 "title": "\"90 Days to Visibility\"",
+                "thingsToLearn": "Visibility compounds through structured consistency: combining authority content, targeted campaigns, and corporate partnerships.",
                 "question": "Group Activity: \"You have 90 days to make Tukio significantly more visible.\"",
                 "points": [
                     "Develop: 3 Content Ideas (demonstrating authority & mastery)",
@@ -759,6 +798,7 @@ slides = [
             {
                 "icon": "ri-video-line",
                 "title": "Content That Converts",
+                "thingsToLearn": "Content should demonstrate: What we know + What we've done + What customers say + What we can do.",
                 "question": "How does our content prove our capability rather than just announce availability?",
                 "points": [
                     "What we know (industry expertise & thought leadership)",
@@ -795,6 +835,7 @@ slides = [
             {
                 "icon": "ri-group-line",
                 "title": "Our Customer Base",
+                "thingsToLearn": "It costs 5x less to create more value for existing clients than to acquire new ones—mine existing relationships for untapped needs.",
                 "question": "\"Who are our customers, and what are we currently doing to keep them?\"",
                 "points": [
                     "Profiling existing corporate vs private event clients",
@@ -805,6 +846,7 @@ slides = [
             {
                 "icon": "ri-hand-coin-line",
                 "title": "5 Ways to Generate Revenue",
+                "thingsToLearn": "Revenue expands across 5 paths: more customers, more frequent purchases, higher value per transaction, new services, and new markets.",
                 "question": "Which of the 5 growth paths are we looking to pursue to increase revenue, and how?",
                 "points": [
                     "a. More Customers (Acquire new corporate & institutional clients)",
@@ -817,6 +859,7 @@ slides = [
             {
                 "icon": "ri-lightbulb-flash-line",
                 "title": "Value Creation Mindset",
+                "thingsToLearn": "Growth is our ability to create more value for the customers we already have by packaging advisory and retainer offerings.",
                 "question": "How do we transition from transactional event gigs to ongoing value creation?",
                 "points": [
                     "Growth isn't just our ability to get more customers",
@@ -836,6 +879,7 @@ slides = [
         "title": "The TUKIO Money Tree",
         "subtitle": "Group Activity: \"What else can Tukio sell?\" (Branches = Other Values We Offer)",
         "layout": "money-tree-activity",
+        "thingsToLearn": "Before launching any new revenue branch, validate it against the 4 litmus tests: active demand, operational competence, healthy profit margin, and low capital risk.",
         "coreQuestion": "What else can Tukio sell beyond event planning?",
         "branches": [
             {"icon": "ri-building-2-line", "title": "Corporate Event Strategy & Production", "desc": "End-to-end technical staging, AV, lighting & executive protocol"},
@@ -861,6 +905,7 @@ slides = [
         "title": "Tukio Strategy War Room: From Ideas to Priorities",
         "subtitle": "Group Strategy: Populating the Strategic Planning Matrix",
         "layout": "matrix-framework",
+        "thingsToLearn": "Ideas generate inspiration, but only the 10-point Strategic Planning Matrix with assigned teams, required resources, and KPIs produces execution.",
         "matrixHeaders": [
             {"title": "Vision Area", "desc": "Key organizational priority"},
             {"title": "Desired Outcome", "desc": "Specific result to achieve"},
@@ -888,6 +933,7 @@ slides = [
             {
                 "icon": "ri-check-line",
                 "title": "Team Commitments",
+                "thingsToLearn": "Execution begins tomorrow morning: individual commitment to immediate priorities transforms strategic intent into operational reality.",
                 "question": "\"What are our immediate agreed personal and departmental action commitments?\"",
                 "points": [
                     "Personal and departmental action commitments for Q4 2026",
@@ -898,6 +944,7 @@ slides = [
             {
                 "icon": "ri-file-list-3-line",
                 "title": "Documentation & Communique",
+                "thingsToLearn": "Clear documentation within 48 hours locks in consensus and prevents strategic drift.",
                 "question": "How will the session communique and implementation matrix be circulated?",
                 "points": [
                     "Circulation of strategy session summary report within 48 hours",
@@ -908,6 +955,7 @@ slides = [
             {
                 "icon": "ri-calendar-check-line",
                 "title": "Follow-Up Cadence",
+                "thingsToLearn": "Strategy is kept alive only through disciplined monthly milestones and quarterly leadership reviews.",
                 "question": "What monthly and quarterly review cadence will keep this strategy alive?",
                 "points": [
                     "Monthly review meetings to assess milestone execution",
@@ -923,8 +971,8 @@ slides = [
 
 code = '// Master Slide Dataset for Tukio Konsults Ltd - 2026 Strategy Session\n'
 code += '// Strictly aligned with the Official Lesson Note Plan & Strategy Agenda\n'
-code += '// Strict User Directives: Pure talking points, topics, cards, and prominent questions.\n'
-code += '// Zero assumed narratives or fabricated stories.\n\n'
+code += '// Strict User Directives: Before each discussion, add things to learn about each sub-topic.\n'
+code += '// Pure talking points, topics, cards, and prominent questions. Zero assumed narratives.\n\n'
 code += 'const tukioStrategyData = ' + json.dumps(slides, indent=2) + ';\n\n'
 code += 'if (typeof module !== "undefined") { module.exports = tukioStrategyData; }\n'
 

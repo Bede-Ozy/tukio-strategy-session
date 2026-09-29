@@ -1990,23 +1990,31 @@ body.is-fullscreen .app-header:hover {
 }
 
 /* 2. Talking Points 3-Card Row */
+.talking-points-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: stretch;
+}
+
 .talking-points-row {
   display: flex;
-  gap: 30px;
+  gap: 22px;
   height: 100%;
   align-items: stretch;
-  padding: 10px 0;
+  padding: 4px 0;
+  flex: 1;
 }
 
 .talking-point-card {
   flex: 1;
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 38px 34px;
+  border-radius: 18px;
+  padding: 22px 22px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 10px;
   box-shadow: var(--shadow-premium);
   transition: transform 0.25s, border-color 0.25s;
 }
@@ -2017,45 +2025,46 @@ body.is-fullscreen .app-header:hover {
 }
 
 .card-top-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background: rgba(255, 107, 0, 0.12);
   color: var(--brand-orange);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
+  flex-shrink: 0;
 }
 
 .card-topic-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 2.1rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: #FFFFFF;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .card-points-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 5px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .point-row {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: flex-start;
-  font-size: 1.45rem;
-  line-height: 1.5;
+  font-size: 1.22rem;
+  line-height: 1.38;
   color: var(--text-main);
 }
 
 .point-bullet {
   color: var(--brand-orange);
   font-weight: 900;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1;
 }
 
@@ -2982,36 +2991,136 @@ body.is-fullscreen .app-header:hover {
 }
 
 /* ==========================================================================
-   10. CARD DISCUSSION QUESTION (PROMINENT PROMPT CALLOUT)
+   10. THINGS TO LEARN & DISCUSSION QUESTIONS
    ========================================================================== */
-.card-discussion-question {
-  background: rgba(255, 107, 0, 0.09);
-  border: 1px solid rgba(255, 107, 0, 0.32);
-  border-left: 5px solid var(--brand-orange);
-  padding: 14px 18px;
+
+/* Top-of-slide Things to Learn Banner */
+.slide-things-to-learn-banner {
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.28);
+  border-left: 5px solid #38BDF8;
   border-radius: 12px;
+  padding: 10px 18px;
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: #FBBF24;
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.32rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin: 4px 0 8px 0;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
-.card-discussion-question i {
+.slide-learn-badge {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #38BDF8;
+  color: #0A0E1A;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.slide-learn-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F0F9FF;
+  line-height: 1.35;
+}
+
+[data-theme="light"] .slide-things-to-learn-banner {
+  background: rgba(14, 165, 233, 0.08);
+  border-color: rgba(14, 165, 233, 0.35);
+}
+
+[data-theme="light"] .slide-learn-text {
+  color: #0C4A6E;
+}
+
+/* Card-level Things to Learn Callout */
+.card-things-to-learn {
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.28);
+  border-left: 4px solid #38BDF8;
+  padding: 9px 13px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.learn-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #38BDF8;
+  letter-spacing: 0.06em;
+}
+
+.learn-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  line-height: 1.35;
+}
+
+[data-theme="light"] .card-things-to-learn {
+  background: rgba(14, 165, 233, 0.07);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+[data-theme="light"] .learn-text {
+  color: #0369A1;
+}
+
+/* Card-level Discussion Question Callout */
+.card-discussion-question {
+  background: rgba(255, 107, 0, 0.09);
+  border: 1px solid rgba(255, 107, 0, 0.32);
+  border-left: 4px solid var(--brand-orange);
+  padding: 9px 13px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
   color: var(--brand-orange);
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  margin-top: 2px;
+  letter-spacing: 0.06em;
+}
+
+.question-text {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #FBBF24;
+  line-height: 1.35;
 }
 
 [data-theme="light"] .card-discussion-question {
   background: rgba(255, 107, 0, 0.08);
   border-color: rgba(255, 107, 0, 0.35);
+}
+
+[data-theme="light"] .question-text {
   color: #B45309;
 }
 
