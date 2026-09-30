@@ -222,6 +222,12 @@ document.addEventListener("DOMContentLoaded", () => {
       case "matrix-framework":
         renderMatrixFramework(slide, containerEl);
         break;
+      case "priority-test-grid":
+        renderPriorityTestGrid(slide, containerEl);
+        break;
+      case "compiling-strategy-grid":
+        renderCompilingStrategyGrid(slide, containerEl);
+        break;
       default:
         renderGenericSlide(slide, containerEl);
         break;
@@ -974,6 +980,110 @@ document.addEventListener("DOMContentLoaded", () => {
               Before committing to a new service branch, the leadership team must answer these 4 tests:
             </p>
             ${testsHtml}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Priority Test 5-Card Grid (Strategy War Room)
+  function renderPriorityTestGrid(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
+    const introHtml = slide.introNote ? `
+      <div class="priority-intro-banner">
+        <div class="priority-intro-breadcrumbs">
+          <span>Journey</span> <i class="ri-arrow-right-s-line"></i>
+          <span>SWOT</span> <i class="ri-arrow-right-s-line"></i>
+          <span>Ownership</span> <i class="ri-arrow-right-s-line"></i>
+          <span>Sales</span> <i class="ri-arrow-right-s-line"></i>
+          <span>Customer</span> <i class="ri-arrow-right-s-line"></i>
+          <span>Brand</span> <i class="ri-arrow-right-s-line"></i>
+          <span style="color: var(--brand-orange); font-weight: 800;">Revenue</span>
+        </div>
+        <p class="priority-intro-question">"What are the most important things we need to do next?"</p>
+      </div>
+    ` : "";
+
+    const testsHtml = (slide.tests || []).map((t, idx) => `
+      <div class="priority-test-card">
+        <div class="test-top-header">
+          <span class="test-num">0${idx + 1}</span>
+          <span class="test-name">${t.name}</span>
+        </div>
+        <div class="test-q-box">
+          <i class="ri-questionnaire-line"></i>
+          <span>${t.question}</span>
+        </div>
+        <p class="test-desc">${t.desc}</p>
+      </div>
+    `).join("");
+
+    containerEl.innerHTML = `
+      <div class="priority-test-wrapper">
+        ${learnBannerHtml}
+        ${introHtml}
+        <div class="priority-tests-grid">
+          ${testsHtml}
+        </div>
+      </div>
+    `;
+  }
+
+  // Compiling Strategy: 5 Pillars & 4 Strategic Questions
+  function renderCompilingStrategyGrid(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
+    const pillarsHtml = (slide.pillars || []).map(p => `
+      <div class="compiling-pillar-card">
+        <span class="pillar-letter">${p.letter}.</span>
+        <div>
+          <h4 class="pillar-title">${p.title}</h4>
+          <p class="pillar-desc">${p.desc}</p>
+        </div>
+      </div>
+    `).join("");
+
+    const questionsHtml = (slide.coreQuestions || []).map((q, idx) => `
+      <div class="compiling-q-card">
+        <div class="compiling-q-header">
+          <span class="compiling-q-badge">Question 0${idx + 1}</span>
+          <span class="compiling-q-label">${q.label}</span>
+        </div>
+        <h4 class="compiling-q-text">"${q.question}"</h4>
+        <p class="compiling-q-sub">${q.desc}</p>
+      </div>
+    `).join("");
+
+    containerEl.innerHTML = `
+      <div class="compiling-wrapper">
+        ${learnBannerHtml}
+        <div class="compiling-main-grid">
+          <div class="compiling-pillars-col">
+            <div class="compiling-section-heading">
+              <i class="ri-git-merge-line"></i> Compile All Our Work Together (5 Pillars)
+            </div>
+            <div class="compiling-pillars-list">
+              ${pillarsHtml}
+            </div>
+          </div>
+          <div class="compiling-questions-col">
+            <div class="compiling-section-heading" style="color: #FBBF24;">
+              <i class="ri-compass-3-line"></i> ...And Then Ask The 4 Questions
+            </div>
+            <div class="compiling-questions-list">
+              ${questionsHtml}
+            </div>
           </div>
         </div>
       </div>

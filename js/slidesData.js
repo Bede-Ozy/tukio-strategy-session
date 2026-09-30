@@ -1043,18 +1043,120 @@ const tukioStrategyData = [
         "q": "Can we start without a huge investment? (Low capital risk?)"
       }
     ],
-    "takeaway": "Every new revenue branch must satisfy: Demand, Delivery, Profitability, and Low Capital Risk.",
-    "notes": "Group Activity: The TUKIO Money Tree. Identify additional values and evaluate against the 4 questions."
+    "debrief": "Solve more of the customer's problems, and money will come.",
+    "takeaway": "Solve more of the customer's problems, and money will come.",
+    "notes": "Group Activity: The TUKIO Money Tree. Debriefing: Solve more of the customer's problems, and money will come."
   },
   {
     "id": 25,
     "session": "War Room",
     "sessionNum": 14,
-    "category": "5:15 \u2013 5:45 PM \u2022 STRATEGY WAR ROOM",
-    "title": "Tukio Strategy War Room: From Ideas to Priorities",
-    "subtitle": "Group Strategy: Populating the Strategic Planning Matrix",
+    "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
+    "title": "Strategy War Room: Strategy is Where Ideas Become Choices",
+    "subtitle": "Objective: Put all our deliberation together & subject every priority to the 5-point test",
+    "layout": "priority-test-grid",
+    "introNote": "By this stage, the team has discussed: Journey \u2192 SWOT \u2192 Ownership \u2192 Sales \u2192 Customer \u2192 Brand \u2192 Revenue. Now, \"What are the most important things we need to do next?\"",
+    "thingsToLearn": "Strategy is where ideas become choices. For every strategy we will agree upon today, we must subject it to the 5-point Priority Test.",
+    "tests": [
+      {
+        "name": "IMPACT",
+        "question": "Will this significantly affect the business?",
+        "desc": "Does it substantially increase revenue, elevate corporate market stature, or resolve a fundamental operational vulnerability?"
+      },
+      {
+        "name": "URGENCY",
+        "question": "Does it need attention now?",
+        "desc": "Is this non-negotiable for immediate Q4 2026 / 2027 momentum, or is it a secondary initiative that can wait?"
+      },
+      {
+        "name": "FEASIBILITY",
+        "question": "Can we realistically execute it?",
+        "desc": "Do we have the required manpower, technical capability, time bandwidth, and capital to deliver with excellence?"
+      },
+      {
+        "name": "OWNERSHIP",
+        "question": "Who will drive it?",
+        "desc": "Is there a specific, accountable department champion who will take 100% personal responsibility for the outcome?"
+      },
+      {
+        "name": "MEASUREMENT",
+        "question": "How will we know it worked?",
+        "desc": "What concrete metric, revenue number, or quantifiable KPI will prove whether the initiative succeeded?"
+      }
+    ],
+    "takeaway": "Strategy is where ideas become choices.",
+    "notes": "Introductory note & the 5 Priority Tests (Impact, Urgency, Feasibility, Ownership, Measurement)."
+  },
+  {
+    "id": 26,
+    "session": "War Room",
+    "sessionNum": 14,
+    "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
+    "title": "Compiling Our Work: 5 Strategic Focus Areas",
+    "subtitle": "Group Activity: Aligning our work across 5 Pillars & answering the 4 Core Strategic Questions",
+    "layout": "compiling-strategy-grid",
+    "thingsToLearn": "A complete corporate strategy unifies all 5 pillars. For each pillar, the leadership team must answer the 4 foundational questions.",
+    "pillars": [
+      {
+        "letter": "a",
+        "title": "Sales & Business Development",
+        "desc": "Closing high-value corporate deals, pipeline management, consultative pitching"
+      },
+      {
+        "letter": "b",
+        "title": "Customer Experience & Retention",
+        "desc": "7-touchpoint customer journey, post-event delight, lifetime referrals"
+      },
+      {
+        "letter": "c",
+        "title": "Brand & Marketing",
+        "desc": "Distinct value proposition, 90-day visibility, authority content creation"
+      },
+      {
+        "letter": "d",
+        "title": "Revenue Expansion",
+        "desc": "Money tree service branches, corporate retainers, advisory packages"
+      },
+      {
+        "letter": "e",
+        "title": "Team & Operations",
+        "desc": "Ownership in chaos, standardized delivery checklists, vendor reliability"
+      }
+    ],
+    "coreQuestions": [
+      {
+        "label": "Current State",
+        "question": "Where are we?",
+        "desc": "Honest diagnosis of our current operational standing & baseline."
+      },
+      {
+        "label": "Target Vision",
+        "question": "Where do we want to go?",
+        "desc": "Specific milestones and commercial ambitions for 2026-2027."
+      },
+      {
+        "label": "Action Plan",
+        "question": "What must we do?",
+        "desc": "Concrete tactical steps, required systems & process changes."
+      },
+      {
+        "label": "Success Metrics",
+        "question": "How will we measure success?",
+        "desc": "Measurable KPIs, revenue benchmarks & client satisfaction scores."
+      }
+    ],
+    "takeaway": "Where are we? Where do we want to go? What must we do? How will we measure success?",
+    "notes": "Group Activity: Compile all deliberations across the 5 pillars and debate the 4 strategic questions."
+  },
+  {
+    "id": 27,
+    "session": "War Room",
+    "sessionNum": 14,
+    "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
+    "title": "Tukio Strategic Planning Matrix",
+    "subtitle": "From Ideas to Priorities: Populating the 10 Sections of the Master Execution Matrix",
     "layout": "matrix-framework",
-    "thingsToLearn": "Ideas generate inspiration, but only the 10-point Strategic Planning Matrix with assigned teams, required resources, and KPIs produces execution.",
+    "thingsToLearn": "Priorities without assigned ownership, required resources, and measurable KPIs remain merely wishes.",
     "matrixHeaders": [
       {
         "title": "Vision Area",
@@ -1098,10 +1200,10 @@ const tukioStrategyData = [
       }
     ],
     "takeaway": "Priorities without ownership and resources are merely wishes.",
-    "notes": "Group Strategy War Room: Convert today's discussions into the 10 sections of the Strategic Planning Matrix."
+    "notes": "Group Strategy War Room: Convert today's deliberations into the 10 sections of the Strategic Planning Matrix."
   },
   {
-    "id": 26,
+    "id": 28,
     "session": "Closing",
     "sessionNum": 15,
     "category": "5:45 \u2013 6:00 PM \u2022 COMMITMENTS & CLOSING",
