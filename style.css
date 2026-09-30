@@ -3947,3 +3947,554 @@ body.is-fullscreen .app-header:hover {
   color: #E2E8F0;
 }
 
+/* ==========================================================================
+   MOBILE RESPONSIVE SYSTEM (SCROLLABLE LIKE A WEBSITE ON MOBILE)
+   ========================================================================== */
+@media (max-width: 900px) {
+  /* 1. Global Document Flow & Scrolling */
+  html, body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .app-container {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+  }
+
+  /* 2. Top Session Navigator (Horizontal Swipe) */
+  .app-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 95 !important;
+    padding: 8px 12px !important;
+    background: rgba(10, 15, 30, 0.96) !important;
+    backdrop-filter: blur(14px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .deck-selector {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap !important;
+    padding: 4px 2px !important;
+    scrollbar-width: none !important;
+    gap: 6px !important;
+  }
+
+  .deck-selector::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .session-btn {
+    padding: 6px 13px !important;
+    font-size: 0.82rem !important;
+    border-radius: 6px !important;
+  }
+
+  /* 3. Floating Left Tools Dock: Move to compact floating header bar on mobile */
+  .floating-left-dock {
+    position: fixed !important;
+    left: auto !important;
+    right: 12px !important;
+    top: 54px !important;
+    transform: none !important;
+    flex-direction: row !important;
+    gap: 4px !important;
+    padding: 4px 8px !important;
+    border-radius: 24px !important;
+    opacity: 0.92 !important;
+    background: rgba(17, 24, 39, 0.92) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
+    z-index: 98 !important;
+  }
+
+  .dock-btn {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 1.05rem !important;
+  }
+
+  .dock-divider {
+    width: 1px !important;
+    height: 18px !important;
+    margin: 0 2px !important;
+  }
+
+  /* 4. Presentation Canvas: Natural Height & Fluid Web Layout */
+  .presentation-container {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+    display: block !important;
+    padding: 10px 10px 110px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .slide-canvas {
+    height: auto !important;
+    min-height: auto !important;
+    display: block !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* 5. Slide Card Wrapper: Website Content Page */
+  .slide-wrapper {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    border-width: 3px !important;
+    border-radius: 16px !important;
+    padding: 20px 16px 26px 16px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    margin: 0 auto !important;
+    display: block !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* 6. Slide Header & Typography */
+  .slide-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .slide-category {
+    font-size: 0.78rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .slide-title {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .slide-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .slide-header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 4px !important;
+  }
+
+  .slide-header-logo {
+    max-height: 28px !important;
+    max-width: 110px !important;
+  }
+
+  /* 7. Slide Body: Pure Web Scroll Flow */
+  .slide-body {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  /* 8. Things to Learn Banner */
+  .slide-things-to-learn-banner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 12px 14px !important;
+    margin-bottom: 16px !important;
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .slide-learn-badge {
+    font-size: 0.74rem !important;
+    padding: 3px 8px !important;
+  }
+
+  /* 9. Takeaway Bar */
+  .slide-takeaway-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 12px 14px !important;
+    margin-top: 18px !important;
+  }
+
+  .takeaway-badge {
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .takeaway-text {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 10. Slide Footer */
+  .slide-footer {
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-top: 20px !important;
+    padding-top: 14px !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+  }
+
+  .slide-footer-left {
+    justify-content: center !important;
+    font-size: 0.8rem !important;
+  }
+
+  .slide-footer-right {
+    text-align: center !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* 11. Bottom Sticky Controls Overlay */
+  .controls-overlay {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    background: rgba(10, 15, 30, 0.96) !important;
+    backdrop-filter: blur(14px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    padding: 10px 16px !important;
+    z-index: 99 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .control-btn {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .slide-indicator {
+    font-size: 0.9rem !important;
+  }
+
+  .progress-bar-container {
+    width: 80px !important;
+  }
+
+  /* 12. Title Cover Slide */
+  .title-cover-container {
+    padding: 24px 12px !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  .title-main-h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .title-main-subtitle {
+    font-size: 1.05rem !important;
+  }
+
+  .title-meta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .title-logo-pair {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+  }
+
+  .title-logo-img {
+    max-height: 40px !important;
+  }
+
+  /* 13. Talking Points Grid (3 & 4 cards) */
+  .talking-points-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+    height: auto !important;
+  }
+
+  .talking-point-card {
+    width: 100% !important;
+    flex: none !important;
+    padding: 18px 16px !important;
+  }
+
+  .card-top-icon {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.3rem !important;
+  }
+
+  .card-title {
+    font-size: 1.25rem !important;
+  }
+
+  .card-question {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .card-points-list {
+    gap: 8px !important;
+  }
+
+  .card-point-item {
+    font-size: 0.92rem !important;
+  }
+
+  /* 14. Agenda Table Grid */
+  .agenda-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .agenda-item {
+    padding: 12px 14px !important;
+  }
+
+  .agenda-item-time {
+    font-size: 0.85rem !important;
+  }
+
+  .agenda-item-title {
+    font-size: 0.98rem !important;
+  }
+
+  /* 15. Energiser Prompts */
+  .prompts-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .prompt-card {
+    padding: 18px 16px !important;
+  }
+
+  .prompt-text {
+    font-size: 1.15rem !important;
+  }
+
+  /* 16. Journey 8 Points */
+  .journey-grid-8 {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .journey-debrief-box {
+    margin-top: 16px !important;
+    padding: 14px 16px !important;
+  }
+
+  .debrief-questions-list {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* 17. START STOP CONTINUE & SWOT Interactive Boards */
+  .ssc-interactive-wrapper,
+  .swot-interactive-wrapper {
+    height: auto !important;
+  }
+
+  .ssc-carousel-track,
+  .swot-carousel-track {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    height: auto !important;
+  }
+
+  .ssc-interactive-card,
+  .swot-interactive-card {
+    width: 100% !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    padding: 18px 16px !important;
+    min-height: auto !important;
+  }
+
+  .round-timer-wrapper {
+    margin: 14px 0 !important;
+  }
+
+  .round-timer-dial {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .round-timer-digits {
+    font-size: 1.4rem !important;
+  }
+
+  /* 18. Closing Room Activity */
+  .closing-room-wrapper {
+    gap: 16px !important;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .challenge-steps-box {
+    padding: 14px !important;
+  }
+
+  /* 19. Customer Journey Walk */
+  .customer-journey-wrapper {
+    gap: 16px !important;
+  }
+
+  .journey-walk-steps {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 8px !important;
+    gap: 8px !important;
+  }
+
+  .walk-step-pill {
+    padding: 8px 14px !important;
+    font-size: 0.85rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .walk-questions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* 20. Money Tree */
+  .money-tree-wrapper {
+    gap: 16px !important;
+  }
+
+  .tree-branches-list {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .tree-eval-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* 21. Priority Tests Grid */
+  .priority-tests-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .priority-test-card {
+    padding: 16px !important;
+  }
+
+  /* 22. Compiling Strategy 5 Pillars & Questions */
+  .compiling-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .compiling-pillars-list {
+    gap: 8px !important;
+  }
+
+  .compiling-questions-list {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .compiling-q-card:nth-child(5) {
+    grid-column: auto !important;
+  }
+
+  /* 23. Section 2: Purpose Pillars Grid */
+  .purpose-pillars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .purpose-pillar-card {
+    padding: 16px !important;
+  }
+
+  /* 24. Section 3: Objectives & Outcomes Split */
+  .objectives-outcomes-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .split-col {
+    padding: 18px 16px !important;
+  }
+
+  /* 25. Planning Matrix (Horizontal Table Scroll on Mobile) */
+  .matrix-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 12px !important;
+  }
+
+  .matrix-grid {
+    min-width: 680px !important;
+  }
+
+  /* 26. Break Card */
+  .break-card {
+    padding: 30px 18px !important;
+  }
+
+  .break-title {
+    font-size: 2rem !important;
+  }
+
+  /* 27. Drawers & Modals on Mobile */
+  .sidebar {
+    width: 85% !important;
+    max-width: 320px !important;
+    z-index: 105 !important;
+  }
+
+  .speaker-notes-drawer {
+    width: 88% !important;
+    max-width: 360px !important;
+    z-index: 105 !important;
+  }
+
+  .timer-modal-card {
+    width: 90% !important;
+    max-width: 380px !important;
+    padding: 22px 18px !important;
+  }
+}
+

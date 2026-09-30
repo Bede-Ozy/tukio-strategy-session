@@ -91,9 +91,23 @@ document.addEventListener("DOMContentLoaded", () => {
     swotRunningIndex = -1;
   }
 
-  // 1. SCALING ENGINE: Math calculation to scale 1920x1080 stage to viewport
+  // 1. SCALING ENGINE: Math calculation to scale 1920x1080 stage to viewport (Desktop) or natural scrolling (Mobile)
   function scaleSlide() {
     if (!wrapper || !container) return;
+
+    // Mobile / Tablet Responsive Mode (<= 900px): let document flow naturally and scroll like a website
+    if (window.innerWidth <= 900) {
+      wrapper.style.transform = "none";
+      wrapper.style.position = "relative";
+      wrapper.style.top = "auto";
+      wrapper.style.left = "auto";
+      return;
+    }
+
+    wrapper.style.position = "absolute";
+    wrapper.style.top = "50%";
+    wrapper.style.left = "50%";
+
     const targetW = 1920;
     const targetH = 1080;
     const containerW = container.clientWidth;
@@ -121,6 +135,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index < 0) index = 0;
     if (index >= slides.length) index = slides.length - 1;
     currentIndex = index;
+
+    // On mobile, scroll smoothly to the top of the page on slide change
+    if (window.innerWidth <= 900) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (container) container.scrollTo({ top: 0, behavior: "smooth" });
+    }
 
     // Stop any active interactive timers when changing slides
     stopSscTimer();
@@ -1581,6 +1601,38 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = Math.floor(pct * slides.length);
       renderSlide(target);
     });
+  }
+
+  // Mobile Touch Swipe Navigation (Swipe Left = Next, Swipe Right = Prev)
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  document.addEventListener("touchstart", (e) => {
+    if (!e.changedTouches || e.changedTouches.length === 0) return;
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  document.addEventListener("touchend", (e) => {
+    if (!e.changedTouches || e.changedTouches.length === 0) return;
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleMobileSwipe();
+  }, { passive: true });
+
+  function handleMobileSwipe() {
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+    // Only trigger if horizontal swipe is prominent (> 60px and more horizontal than vertical)
+    if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.5) {
+      if (diffX < 0) {
+        nextSlide(); // Swiped left -> next slide
+      } else {
+        prevSlide(); // Swiped right -> previous slide
+      }
+    }
   }
 
   // Initial Render Slide 0
