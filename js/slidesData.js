@@ -431,45 +431,60 @@ const tukioStrategyData = [
     "sessionNum": 6,
     "category": "11:15 AM \u2013 12:00 PM \u2022 SESSION 4: BUSINESS HEALTH CHECK",
     "title": "The Tukio Konsult Business Check",
-    "subtitle": "Objective: Identify business principles, diagnose practice & open future opportunities",
+    "subtitle": "Tukio Konsult has been around for over a decade \u2022 Diagnosing our 4 Key Business Departments",
     "layout": "talking-points-grid",
     "cards": [
       {
         "icon": "ri-settings-4-line",
-        "title": "Operations & Delivery",
+        "title": "Operations",
         "thingsToLearn": "Operational health means zero surprises on event day\u2014achieved through standardized vendor management and rigorous pre-event run-sheets.",
-        "question": "What is healthy, what is unhealthy, and what is the underlying problem in Operations?",
+        "question": "What is healthy, unhealthy & the underlying problem?",
         "points": [
-          "Event execution workflows and vendor coordination systems",
-          "On-ground delivery consistency and execution capacity",
-          "What must be done to make Operations work seamlessly?"
+          "What is healthy in our event execution workflows?",
+          "What is unhealthy in vendor reliability & coordination?",
+          "What is the underlying problem causing disruptions?",
+          "What should be done to make Operations work seamlessly?"
+        ]
+      },
+      {
+        "icon": "ri-megaphone-line",
+        "title": "Sales & Marketing",
+        "thingsToLearn": "Predictable deal flow requires active lead tracking and consultative pitching rather than waiting passively for inbound calls.",
+        "question": "What is healthy, unhealthy & the underlying problem?",
+        "points": [
+          "What is healthy in our pitch conversion & corporate reach?",
+          "What is unhealthy in lead tracking & pipeline management?",
+          "What is the underlying problem causing deals to stall?",
+          "What should be done to make Sales & Marketing work?"
         ]
       },
       {
         "icon": "ri-customer-service-2-line",
-        "title": "Sales, Marketing & CX",
-        "thingsToLearn": "Sales and customer experience are intertwined: how we sell sets expectations, and how we deliver determines repeat revenue.",
-        "question": "What is healthy, what is unhealthy, and what is the underlying problem in Sales & CX?",
+        "title": "Customer Experience",
+        "thingsToLearn": "Customer delight must be engineered across every touchpoint, turning one-off clients into lifetime advocates and repeat accounts.",
+        "question": "What is healthy, unhealthy & the underlying problem?",
         "points": [
-          "Client pipeline, conversion rates & lead management",
-          "Customer experience across the entire booking cycle",
-          "What must be done to make Sales & CX work seamlessly?"
+          "What is healthy in client trust & on-site hospitality?",
+          "What is unhealthy in communication & post-event care?",
+          "What is the underlying problem causing client friction?",
+          "What should be done to make Customer Experience work?"
         ]
       },
       {
         "icon": "ri-bank-card-line",
-        "title": "Finance and Administration",
-        "thingsToLearn": "Cash flow is the lifeblood of consulting: prompt milestone invoicing and cost discipline protect business sustainability.",
-        "question": "What is healthy, what is unhealthy, and what is the underlying problem in Finance & Admin?",
+        "title": "Finance and Admin",
+        "thingsToLearn": "Cash flow discipline and timely milestone invoicing safeguard company liquidity and sustain long-term operational health.",
+        "question": "What is healthy, unhealthy & the underlying problem?",
         "points": [
-          "Invoicing promptness, cash flow discipline & cost control",
-          "Administrative support, team coordination & documentation",
-          "What must be done to make Finance & Admin work seamlessly?"
+          "What is healthy in budgeting & expense controls?",
+          "What is unhealthy in payment collection & admin speed?",
+          "What is the underlying problem in financial follow-through?",
+          "What should be done to make Finance & Admin work?"
         ]
       }
     ],
     "takeaway": "An honest diagnosis of our departments is the first step toward organizational health.",
-    "notes": "Introductory note: Tukio has existed for over a decade. Plenary discussion on the 4 core departments."
+    "notes": "Introductory note: Tukio has existed for over a decade. Plenary discussion diagnosing the 4 key business operations departments: Operations, Sales & Marketing, Customer Experience, Finance & Admin."
   },
   {
     "id": 12,
@@ -1093,9 +1108,9 @@ const tukioStrategyData = [
     "sessionNum": 14,
     "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
     "title": "Compiling Our Work: 5 Strategic Focus Areas",
-    "subtitle": "Group Activity: Aligning our work across 5 Pillars & answering the 4 Core Strategic Questions",
+    "subtitle": "Group Activity: Aligning our work across 5 Pillars & answering the 5 Core Strategic Questions",
     "layout": "compiling-strategy-grid",
-    "thingsToLearn": "A complete corporate strategy unifies all 5 pillars. For each pillar, the leadership team must answer the 4 foundational questions.",
+    "thingsToLearn": "A complete corporate strategy unifies all 5 pillars. For each pillar, the leadership team must answer the 5 foundational questions.",
     "pillars": [
       {
         "letter": "a",
@@ -1143,10 +1158,15 @@ const tukioStrategyData = [
         "label": "Success Metrics",
         "question": "How will we measure success?",
         "desc": "Measurable KPIs, revenue benchmarks & client satisfaction scores."
+      },
+      {
+        "label": "Accountability",
+        "question": "Who\u2019s responsible?",
+        "desc": "Designated departmental owner and team lead driving execution."
       }
     ],
-    "takeaway": "Where are we? Where do we want to go? What must we do? How will we measure success?",
-    "notes": "Group Activity: Compile all deliberations across the 5 pillars and debate the 4 strategic questions."
+    "takeaway": "Where are we? Where do we want to go? What must we do? How will we measure success? Who\u2019s responsible?",
+    "notes": "Group Activity: Compile all deliberations across the 5 pillars and debate the 5 strategic questions."
   },
   {
     "id": 27,

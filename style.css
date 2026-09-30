@@ -3712,6 +3712,10 @@ body.is-fullscreen .app-header:hover {
   border-color: #FBBF24;
 }
 
+.compiling-q-card:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
 .compiling-q-header {
   display: flex;
   align-items: center;
