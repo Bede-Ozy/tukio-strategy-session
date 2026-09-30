@@ -91,6 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
     swotRunningIndex = -1;
   }
 
+  // Closing Room Timer State
+  let closingRoomInterval = null;
+  let closingRoomTime = 300;
+  let isClosingRoomRunning = false;
+
+  function stopClosingRoomTimer() {
+    if (closingRoomInterval) {
+      clearInterval(closingRoomInterval);
+      closingRoomInterval = null;
+    }
+    isClosingRoomRunning = false;
+  }
+
   // 1. SCALING ENGINE: Math calculation to scale 1920x1080 stage to viewport (Desktop) or natural scrolling (Mobile)
   function scaleSlide() {
     if (!wrapper || !container) return;
@@ -145,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Stop any active interactive timers when changing slides
     stopSscTimer();
     stopSwotTimer();
+    stopClosingRoomTimer();
 
     const slide = slides[currentIndex];
 
@@ -254,6 +268,9 @@ document.addEventListener("DOMContentLoaded", () => {
       case "objectives-outcomes-split":
         renderObjectivesOutcomesSplit(slide, containerEl);
         break;
+      case "things-to-learn-overview":
+        renderThingsToLearnOverview(slide, containerEl);
+        break;
       default:
         renderGenericSlide(slide, containerEl);
         break;
@@ -299,13 +316,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderAgendaTable(slide, containerEl) {
     const rowsHtml = (slide.schedule || []).map((row, i) => `
       <tr class="${row.session.includes('Break') || row.session.includes('Lunch') ? 'agenda-break-row' : ''}">
-        <td style="font-family: 'Outfit'; font-weight: 800; color: var(--brand-orange); white-space: nowrap; font-size: 1.15rem;">
+        <td style="font-family: 'Outfit'; font-weight: 800; color: var(--brand-orange); white-space: nowrap; font-size: 1.45rem; padding: 16px 24px;">
           ${row.time}
         </td>
-        <td style="font-weight: 600; font-size: 1.25rem; color: var(--slide-color);">
+        <td style="font-weight: 700; font-size: 1.65rem; line-height: 1.35; color: var(--slide-color); padding: 16px 24px;">
           ${row.session}
         </td>
-        <td style="color: var(--text-muted); font-size: 1.15rem; font-weight: 500;">
+        <td style="color: var(--text-muted); font-size: 1.45rem; font-weight: 600; padding: 16px 24px;">
           ${row.lead}
         </td>
       </tr>
@@ -316,15 +333,42 @@ document.addEventListener("DOMContentLoaded", () => {
         <table class="agenda-schedule-table">
           <thead>
             <tr>
-              <th style="width: 220px;">Time</th>
-              <th>Session</th>
-              <th style="width: 320px;">Lead / Method</th>
+              <th style="width: 240px; font-size: 1.55rem; padding: 18px 24px;">Time</th>
+              <th style="font-size: 1.55rem; padding: 18px 24px;">Session</th>
+              <th style="width: 360px; font-size: 1.55rem; padding: 18px 24px;">Lead / Method</th>
             </tr>
           </thead>
           <tbody>
             ${rowsHtml}
           </tbody>
         </table>
+      </div>
+    `;
+  }
+
+  // Dedicated Things to Learn Overview (3 Foundational Principle Cards)
+  function renderThingsToLearnOverview(slide, containerEl) {
+    const itemsHtml = (slide.items || []).map((item, idx) => `
+      <div class="ttl-overview-card">
+        <div class="ttl-card-top">
+          <div class="ttl-card-badge">
+            <span class="ttl-badge-num">0${item.num || idx + 1}</span>
+            <span class="ttl-badge-label">KEY PRINCIPLE</span>
+          </div>
+          <div class="ttl-card-icon"><i class="${item.icon || 'ri-lightbulb-line'}"></i></div>
+        </div>
+        <h4 class="ttl-card-topic">${item.topic}</h4>
+        <div class="ttl-card-body">
+          <p class="ttl-card-insight">${item.insight}</p>
+        </div>
+      </div>
+    `).join("");
+
+    containerEl.innerHTML = `
+      <div class="ttl-overview-container">
+        <div class="ttl-overview-cards-grid">
+          ${itemsHtml}
+        </div>
       </div>
     `;
   }
@@ -428,34 +472,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const slideTimerToggle = document.getElementById("slide-btn-timer-toggle");
     const slideTimerReset = document.getElementById("slide-btn-timer-reset");
     const slideTimerDigits = document.getElementById("slide-timer-digits");
-    const slideTimerIcon = document.getElementById("slide-timer-icon");
-    const slideTimerBtnText = document.getElementById("slide-timer-btn-text");
 
     if (slideTimerToggle) {
       slideTimerToggle.addEventListener("click", () => {
         toggleTimer();
-        updateSlideTimerUI();
+      });
+    }
+    if (slideTimerDigits) {
+      slideTimerDigits.style.cursor = "pointer";
+      slideTimerDigits.title = "Click to Start / Pause Timer";
+      slideTimerDigits.addEventListener("click", () => {
+        toggleTimer();
       });
     }
     if (slideTimerReset) {
       slideTimerReset.addEventListener("click", () => {
         resetTimer(300);
-        updateSlideTimerUI();
       });
     }
 
-    function updateSlideTimerUI() {
-      if (slideTimerDigits) slideTimerDigits.textContent = formatTime(timerRemaining);
-      if (slideTimerIcon && slideTimerBtnText) {
-        if (isTimerRunning) {
-          slideTimerIcon.className = "ri-pause-fill";
-          slideTimerBtnText.textContent = "Pause";
-        } else {
-          slideTimerIcon.className = "ri-play-fill";
-          slideTimerBtnText.textContent = "Start";
-        }
-      }
-    }
+    updateAllTimerDisplays();
   }
 
   // Moments in the Journey (8 Cards: a to h + Debrief Questions)
@@ -585,7 +621,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Round Timer Dial (centered time inside circle, no extra text)
         const timerDialHtml = `
           <div class="round-timer-wrapper">
-            <div class="round-timer-dial dial-${col.type} ${isTimerActive ? 'running' : ''} ${cardTime === 0 ? 'time-elapsed' : ''}">
+            <div class="round-timer-dial dial-${col.type} ${isTimerActive ? 'running' : ''} ${cardTime === 0 ? 'time-elapsed' : ''}" data-card="${idx}" role="button" tabindex="0" title="${isTimerActive ? 'Pause Timer' : 'Start Timer'}">
               <span class="round-timer-digits" id="${flowType}-clock-${idx}">${formatTime(cardTime)}</span>
             </div>
             ${underControlsHtml}
@@ -685,12 +721,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      // Timer Play/Pause toggle
-      containerEl.querySelectorAll(".round-play-btn").forEach(btn => {
-        btn.addEventListener("click", (e) => {
+      // Timer Play/Pause toggle on both Play button and Timer Dial
+      containerEl.querySelectorAll(".round-play-btn, .round-timer-dial").forEach(el => {
+        el.addEventListener("click", (e) => {
           e.stopPropagation();
-          const cardIdx = parseInt(btn.getAttribute("data-card"));
-          toggleTimer(cardIdx);
+          const cardIdx = parseInt(el.getAttribute("data-card"));
+          if (!isNaN(cardIdx)) {
+            toggleTimer(cardIdx);
+          }
         });
       });
 
@@ -714,7 +752,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const delta = parseInt(btn.getAttribute("data-adjust"));
           const times = getTimes();
           times[cardIdx] = Math.max(30, times[cardIdx] + delta);
-          const clockEl = containerEl.querySelector(`#${flowType}-clock-${cardIdx}`);
+          const clockEl = document.getElementById(`${flowType}-clock-${cardIdx}`) || containerEl.querySelector(`#${flowType}-clock-${cardIdx}`);
           if (clockEl) clockEl.textContent = formatTime(times[cardIdx]);
         });
       });
@@ -722,7 +760,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Click dimmed or completed card to activate directly
       containerEl.querySelectorAll(`.${cardBaseClass}.${cardPrefix}-card-dimmed, .${cardBaseClass}.${cardPrefix}-card-completed`).forEach(card => {
         card.addEventListener("click", (e) => {
-          if (e.target.closest("button")) return;
+          if (e.target.closest("button") || e.target.closest(".round-timer-dial")) return;
           stopTimer();
           setActiveIndex(parseInt(card.getAttribute("data-index")));
           updateView();
@@ -741,7 +779,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const intervalHandle = setInterval(() => {
           if (times[cardIdx] > 0) {
             times[cardIdx]--;
-            const clockEl = containerEl.querySelector(`#${flowType}-clock-${cardIdx}`);
+            const clockEl = document.getElementById(`${flowType}-clock-${cardIdx}`) || containerEl.querySelector(`#${flowType}-clock-${cardIdx}`);
             if (clockEl) {
               clockEl.textContent = formatTime(times[cardIdx]);
               if (times[cardIdx] === 0) {
@@ -751,6 +789,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (times[cardIdx] === 0) {
               stopTimer();
               playChime();
+              alert("⏱️ Discussion Round Time is Up!");
               updateView();
             }
           } else {
@@ -863,9 +902,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     // Hook timer for closing room
-    let closingTime = slide.timerSeconds || 300;
-    let closingInterval = null;
-    let isClosingRunning = false;
+    closingRoomTime = slide.timerSeconds || 300;
+    stopClosingRoomTimer();
 
     const btnToggle = document.getElementById("closing-btn-timer-toggle");
     const btnReset = document.getElementById("closing-btn-timer-reset");
@@ -873,46 +911,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const icon = document.getElementById("closing-timer-icon");
     const btnText = document.getElementById("closing-timer-btn-text");
 
+    function updateClosingUI() {
+      if (digits) digits.textContent = formatTime(closingRoomTime);
+      if (icon) icon.className = isClosingRoomRunning ? "ri-pause-fill" : "ri-play-fill";
+      if (btnText) btnText.textContent = isClosingRoomRunning ? "Pause" : "Start Challenge";
+    }
+
+    function toggleClosingTimer() {
+      if (isClosingRoomRunning) {
+        stopClosingRoomTimer();
+        updateClosingUI();
+      } else {
+        isClosingRoomRunning = true;
+        updateClosingUI();
+        closingRoomInterval = setInterval(() => {
+          if (closingRoomTime > 0) {
+            closingRoomTime--;
+            if (digits) digits.textContent = formatTime(closingRoomTime);
+          } else {
+            stopClosingRoomTimer();
+            playChime();
+            alert("⏱️ Closing Challenge Time is Up!");
+            updateClosingUI();
+          }
+        }, 1000);
+      }
+    }
+
     if (btnToggle) {
-      btnToggle.addEventListener("click", () => {
-        if (isClosingRunning) {
-          clearInterval(closingInterval);
-          closingInterval = null;
-          isClosingRunning = false;
-          if (icon) icon.className = "ri-play-fill";
-          if (btnText) btnText.textContent = "Start";
-        } else {
-          isClosingRunning = true;
-          if (icon) icon.className = "ri-pause-fill";
-          if (btnText) btnText.textContent = "Pause";
-          closingInterval = setInterval(() => {
-            if (closingTime > 0) {
-              closingTime--;
-              if (digits) digits.textContent = formatTime(closingTime);
-            } else {
-              clearInterval(closingInterval);
-              closingInterval = null;
-              isClosingRunning = false;
-              playChime();
-              if (icon) icon.className = "ri-play-fill";
-              if (btnText) btnText.textContent = "Restart";
-            }
-          }, 1000);
-        }
+      btnToggle.addEventListener("click", toggleClosingTimer);
+    }
+    if (digits) {
+      digits.style.cursor = "pointer";
+      digits.title = "Click to Start / Pause Challenge";
+      digits.addEventListener("click", toggleClosingTimer);
+    }
+    if (btnReset) {
+      btnReset.addEventListener("click", () => {
+        stopClosingRoomTimer();
+        closingRoomTime = slide.timerSeconds || 300;
+        updateClosingUI();
       });
     }
 
-    if (btnReset) {
-      btnReset.addEventListener("click", () => {
-        clearInterval(closingInterval);
-        closingInterval = null;
-        isClosingRunning = false;
-        closingTime = slide.timerSeconds || 300;
-        if (digits) digits.textContent = formatTime(closingTime);
-        if (icon) icon.className = "ri-play-fill";
-        if (btnText) btnText.textContent = "Start Challenge";
-      });
-    }
+    updateClosingUI();
   }
 
   // Customer Journey Walk in My Shoes (7 Touchpoint Pipeline & 6 Reflection Questions)
@@ -939,9 +981,9 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join("");
 
     const introHtml = slide.introNote ? `
-      <div style="background: rgba(255, 107, 0, 0.08); border: 1px solid rgba(255, 107, 0, 0.28); border-left: 4px solid var(--brand-orange); padding: 12px 20px; border-radius: 10px; margin-bottom: 12px;">
-        <span style="font-size: 0.82rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase;">Introductory Note</span>
-        <p style="font-size: 1.25rem; font-weight: 600; color: var(--slide-color); margin-top: 4px;">${slide.introNote}</p>
+      <div style="background: rgba(255, 107, 0, 0.08); border: 1px solid rgba(255, 107, 0, 0.28); border-left: 4px solid var(--brand-orange); padding: 16px 24px; border-radius: 12px; margin-bottom: 14px;">
+        <span style="font-size: 0.95rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase; letter-spacing: 0.05em;">Introductory Note</span>
+        <p style="font-size: 1.45rem; font-weight: 600; line-height: 1.4; color: var(--slide-color); margin-top: 6px;">${slide.introNote}</p>
       </div>
     ` : "";
 
@@ -1361,7 +1403,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function startTimer() {
     if (isTimerRunning) return;
     isTimerRunning = true;
-    headerTimerBadge.style.display = "inline-flex";
+    if (headerTimerBadge) headerTimerBadge.style.display = "inline-flex";
+
+    if (timerInterval) clearInterval(timerInterval);
 
     timerInterval = setInterval(() => {
       if (timerRemaining > 0) {
@@ -1369,6 +1413,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateAllTimerDisplays();
       } else {
         clearInterval(timerInterval);
+        timerInterval = null;
         isTimerRunning = false;
         playChime();
         alert("⏱️ Discussion Time is Up!");
@@ -1381,7 +1426,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function pauseTimer() {
     isTimerRunning = false;
-    clearInterval(timerInterval);
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
     updateAllTimerDisplays();
   }
 
@@ -1405,6 +1453,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const slideTimerDigits = document.getElementById("slide-timer-digits");
     if (slideTimerDigits) slideTimerDigits.textContent = formatted;
 
+    const slideTimerIcon = document.getElementById("slide-timer-icon");
+    const slideTimerBtnText = document.getElementById("slide-timer-btn-text");
+    if (slideTimerIcon && slideTimerBtnText) {
+      if (isTimerRunning) {
+        slideTimerIcon.className = "ri-pause-fill";
+        slideTimerBtnText.textContent = "Pause";
+      } else {
+        slideTimerIcon.className = "ri-play-fill";
+        slideTimerBtnText.textContent = "Start Timer";
+      }
+    }
+
     if (modalBtnStart) {
       modalBtnStart.innerHTML = isTimerRunning ? '<i class="ri-pause-fill"></i> Pause Timer' : '<i class="ri-play-fill"></i> Start Timer';
     }
@@ -1420,6 +1480,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (headerTimerBadge) headerTimerBadge.addEventListener("click", () => timerModal && timerModal.classList.add("active"));
   if (modalBtnStart) modalBtnStart.addEventListener("click", toggleTimer);
   if (modalBtnReset) modalBtnReset.addEventListener("click", () => resetTimer(300));
+  if (modalTimerDigits) {
+    modalTimerDigits.style.cursor = "pointer";
+    modalTimerDigits.title = "Click to Start / Pause Timer";
+    modalTimerDigits.addEventListener("click", toggleTimer);
+  }
 
   // --------------------------------------------------------------------------
   // FULLSCREEN & AUTO-EXPAND ENGINE WITH TOP-NAV HOVER REVEAL

@@ -1,6 +1,6 @@
 // Master Slide Dataset for Tukio Konsults Ltd - 2026 Strategy Session
 // Strictly aligned with the Official Lesson Note Plan & Strategy Agenda
-// Strict User Directives: Before each discussion, add things to learn about each sub-topic.
+// Strict User Directives: Dedicated Things to Learn slides preceding discussion content slides.
 // Pure talking points, topics, cards, and prominent questions. Zero assumed narratives.
 
 const tukioStrategyData = [
@@ -8,7 +8,7 @@ const tukioStrategyData = [
     "id": 1,
     "session": "Welcome",
     "sessionNum": 1,
-    "category": "TUKIO KONSULTS LTD \u2022 2026 STRATEGY SESSION",
+    "category": "TUKIO KONSULTS LTD • 2026 STRATEGY SESSION",
     "title": "2026 STRATEGY SESSION",
     "subtitle": "No. 8, Suites 9-12, Along 62 Road, 6th Avenue, Gwarinpa, Abuja",
     "layout": "title-cover",
@@ -28,77 +28,77 @@ const tukioStrategyData = [
     "layout": "agenda-table",
     "schedule": [
       {
-        "time": "8:00 \u2013 8:30 AM",
+        "time": "8:00 – 8:30 AM",
         "session": "Arrival and Welcome Address",
         "lead": "Facilitator / Mrs. Fisayo Olabisi"
       },
       {
-        "time": "8:30 \u2013 9:00 AM",
+        "time": "8:30 – 9:00 AM",
         "session": "Session 1: Opening, Expectations & Team Energizer",
         "lead": "Facilitator-Led"
       },
       {
-        "time": "9:00 \u2013 10:00 AM",
+        "time": "9:00 – 10:00 AM",
         "session": "Session 2: The Tukio Journey: Our Past, Present and Future",
         "lead": "Group Workshop"
       },
       {
-        "time": "10:00 \u2013 10:40 AM",
+        "time": "10:00 – 10:40 AM",
         "session": "Session 3: Mentorship Session with Mr. Bankole",
         "lead": "Mr. Bankole"
       },
       {
-        "time": "10:40 \u2013 11:15 AM",
+        "time": "10:40 – 11:15 AM",
         "session": "Tea & Refreshments Break",
         "lead": "All"
       },
       {
-        "time": "11:15 AM \u2013 12:00 PM",
+        "time": "11:15 AM – 12:00 PM",
         "session": "Session 4: The Tukio Konsult Business Check",
         "lead": "Group Workshop"
       },
       {
-        "time": "12:00 \u2013 12:40 PM",
+        "time": "12:00 – 12:40 PM",
         "session": "Session 5: Ownership in Chaos",
         "lead": "Mr. Folarin"
       },
       {
-        "time": "12:40 \u2013 1:30 PM",
+        "time": "12:40 – 1:30 PM",
         "session": "Session 6: Closing Leads & Revenue Generation",
         "lead": "Ms Jumoke"
       },
       {
-        "time": "1:30 \u2013 2:30 PM",
+        "time": "1:30 – 2:30 PM",
         "session": "Lunch & Team Bonding Challenge",
         "lead": "Group Activity"
       },
       {
-        "time": "2:30 \u2013 3:30 PM",
+        "time": "2:30 – 3:30 PM",
         "session": "Session 7: Customer Retention and Experience Strategy",
         "lead": "Mr. Shams / Facilitator"
       },
       {
-        "time": "3:30 \u2013 4:15 PM",
+        "time": "3:30 – 4:15 PM",
         "session": "Session 8: Branding, Marketing & Tukio Visibility",
         "lead": "Group Workshop"
       },
       {
-        "time": "4:15 \u2013 4:30 PM",
+        "time": "4:15 – 4:30 PM",
         "session": "Afternoon Refreshment Break",
         "lead": "All"
       },
       {
-        "time": "4:30 \u2013 5:15 PM",
+        "time": "4:30 – 5:15 PM",
         "session": "Session 9: Revenue Expansion Beyond Event Planning",
         "lead": "Group Workshop"
       },
       {
-        "time": "5:15 \u2013 5:45 PM",
+        "time": "5:15 – 5:45 PM",
         "session": "Tukio Strategy War Room: From Ideas to Priorities",
         "lead": "Group Strategy"
       },
       {
-        "time": "5:45 \u2013 6:00 PM",
+        "time": "5:45 – 6:00 PM",
         "session": "Commitments, Next Steps & Closing",
         "lead": "Facilitator / Management"
       }
@@ -109,7 +109,7 @@ const tukioStrategyData = [
     "id": 3,
     "session": "Agenda",
     "sessionNum": 1,
-    "category": "STRATEGY SESSION PLAN \u2022 SECTION 2",
+    "category": "STRATEGY SESSION PLAN • SECTION 2",
     "title": "Purpose of the Strategy Session",
     "subtitle": "The Purpose of the Tukio Konsults 2026 Strategy Session",
     "layout": "purpose-pillars-grid",
@@ -119,19 +119,19 @@ const tukioStrategyData = [
         "letter": "a",
         "icon": "ri-team-line",
         "title": "Team & Identity Alignment",
-        "desc": "Strengthen the team's understanding of the company\u2019s identity, operations, values, and direction."
+        "desc": "Strengthen the team's understanding of the company’s identity, operations, values, and direction."
       },
       {
         "letter": "b",
         "icon": "ri-history-line",
         "title": "Growth Journey & Lessons",
-        "desc": "Review the company\u2019s growth journey, achievements, lessons, and operational performance."
+        "desc": "Review the company’s growth journey, achievements, lessons, and operational performance."
       },
       {
         "letter": "c",
         "icon": "ri-compass-3-line",
         "title": "2026 Strategic Vision",
-        "desc": "Align all team members on the company\u2019s 2026 strategic vision and priorities."
+        "desc": "Align all team members on the company’s 2026 strategic vision and priorities."
       },
       {
         "letter": "d",
@@ -159,7 +159,7 @@ const tukioStrategyData = [
     "id": 4,
     "session": "Agenda",
     "sessionNum": 1,
-    "category": "STRATEGY SESSION PLAN \u2022 SECTION 3",
+    "category": "STRATEGY SESSION PLAN • SECTION 3",
     "title": "Objectives & Expected Outcomes",
     "subtitle": "Defining Our Strategic Intent and Concrete Tangible Deliverables",
     "layout": "objectives-outcomes-split",
@@ -174,11 +174,11 @@ const tukioStrategyData = [
         },
         {
           "letter": "b",
-          "text": "Review the company\u2019s operational and strategic performance over previous years."
+          "text": "Review the company’s operational and strategic performance over previous years."
         },
         {
           "letter": "c",
-          "text": "Clarify and communicate the company\u2019s 2026 vision."
+          "text": "Clarify and communicate the company’s 2026 vision."
         },
         {
           "letter": "d",
@@ -200,7 +200,7 @@ const tukioStrategyData = [
       "items": [
         {
           "letter": "a",
-          "text": "A unified understanding of Tukio Konsults\u2019 mission, vision, operations, and direction."
+          "text": "A unified understanding of Tukio Konsults’ mission, vision, operations, and direction."
         },
         {
           "letter": "b",
@@ -239,7 +239,38 @@ const tukioStrategyData = [
     "id": 5,
     "session": "Agenda",
     "sessionNum": 1,
-    "category": "8:00 \u2013 8:30 AM \u2022 ARRIVAL & WELCOME",
+    "category": "8:00 – 8:30 AM • ARRIVAL & WELCOME",
+    "title": "Things to Learn: Arrival & Welcome Address",
+    "subtitle": "Core foundational principles & key insights before our discussion on Arrival & Welcome Address",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Welcome Address",
+        "icon": "ri-user-voice-line",
+        "insight": "Strategic alignment begins with psychological safety and an active commitment to speak openly across all levels."
+      },
+      {
+        "num": 2,
+        "topic": "Purpose of the Workshop",
+        "icon": "ri-focus-3-line",
+        "insight": "Strategy sessions are not routine meetings; they exist to diagnose reality and redefine our 5-year commercial trajectory."
+      },
+      {
+        "num": 3,
+        "topic": "Session Ground Rules",
+        "icon": "ri-compass-3-line",
+        "insight": "Constructive friction drives breakthrough decisions—critique processes and systems rigorously while respecting every team member."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 6,
+    "session": "Agenda",
+    "sessionNum": 1,
+    "category": "8:00 – 8:30 AM • ARRIVAL & WELCOME",
     "title": "Arrival & Welcome Address",
     "subtitle": "Lead: Facilitator / Mrs. Fisayo Olabisi",
     "layout": "talking-points-grid",
@@ -247,7 +278,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-user-voice-line",
         "title": "Welcome Address",
-        "thingsToLearn": "Strategic alignment begins with psychological safety and an active commitment to speak openly across all levels.",
         "question": "What is our shared mindset as we convene today?",
         "points": [
           "Opening remarks by Mrs. Fisayo Olabisi",
@@ -258,7 +288,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-focus-3-line",
         "title": "Purpose of the Workshop",
-        "thingsToLearn": "Strategy sessions are not routine meetings; they exist to diagnose reality and redefine our 5-year commercial trajectory.",
         "question": "What core outcomes must we achieve by 6:00 PM?",
         "points": [
           "State the purpose and objectives of today's session",
@@ -269,7 +298,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-compass-3-line",
         "title": "Session Ground Rules",
-        "thingsToLearn": "Constructive friction drives breakthrough decisions\u2014critique processes and systems rigorously while respecting every team member.",
         "question": "How will we ensure candid, constructive debate?",
         "points": [
           "Active participation & open, honest contributions",
@@ -281,10 +309,10 @@ const tukioStrategyData = [
     "notes": "State the purpose and objectives of the strategy session."
   },
   {
-    "id": 6,
+    "id": 7,
     "session": "Energiser",
     "sessionNum": 2,
-    "category": "8:30 \u2013 9:00 AM \u2022 SESSION 1: OPENING & ENERGIZER",
+    "category": "8:30 – 9:00 AM • SESSION 1: OPENING & ENERGIZER",
     "title": "The Tukio Connection",
     "subtitle": "Group Activity: Participants pair up for 5 minutes",
     "layout": "energiser-activity",
@@ -311,10 +339,41 @@ const tukioStrategyData = [
     "notes": "Participants pair up for 5 minutes. Question 1: Introduce partner and share response. Question 2: Capture responses on flipchart."
   },
   {
-    "id": 7,
+    "id": 8,
     "session": "The Journey",
     "sessionNum": 3,
-    "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
+    "category": "9:00 – 10:00 AM • SESSION 2: THE TUKIO JOURNEY",
+    "title": "Things to Learn: The Tukio Journey: What Worked, Improved & To Stop",
+    "subtitle": "Core foundational principles & key insights before our discussion on The Tukio Journey: What Worked, Improved & To Stop",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "What Worked",
+        "icon": "ri-checkbox-circle-line",
+        "insight": "Sustainable growth comes from codifying and scaling the winning practices that consistently produce client delight and repeat business."
+      },
+      {
+        "num": 2,
+        "topic": "What Can Be Improved",
+        "icon": "ri-arrow-up-circle-line",
+        "insight": "Operational friction in handoffs and communication erodes profitability—streamlining workflows creates team speed and execution consistency."
+      },
+      {
+        "num": 3,
+        "topic": "What to Stop",
+        "icon": "ri-close-circle-line",
+        "insight": "Deciding what to STOP is just as critical as deciding what to START—tolerating bad habits drains energy from strategic priorities."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 9,
+    "session": "The Journey",
+    "sessionNum": 3,
+    "category": "9:00 – 10:00 AM • SESSION 2: THE TUKIO JOURNEY",
     "title": "The Tukio Journey: What Worked, Improved & To Stop",
     "subtitle": "Objective: Understand where Tukio has come from and extract lessons from the journey",
     "layout": "talking-points-grid",
@@ -322,7 +381,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-checkbox-circle-line",
         "title": "What Worked",
-        "thingsToLearn": "Sustainable growth comes from codifying and scaling the winning practices that consistently produce client delight and repeat business.",
         "question": "What standout wins, winning approaches & client successes worked exceptionally well?",
         "points": [
           "Major milestone event deliveries and client-delighting moments",
@@ -334,7 +392,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-arrow-up-circle-line",
         "title": "What Can Be Improved",
-        "thingsToLearn": "Operational friction in handoffs and communication erodes profitability\u2014streamlining workflows creates team speed and execution consistency.",
         "question": "Where did we experience friction, and what operational workflows must be improved?",
         "points": [
           "Internal communication speed and inter-departmental handoffs",
@@ -346,7 +403,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-close-circle-line",
         "title": "What to Stop",
-        "thingsToLearn": "Deciding what to STOP is just as critical as deciding what to START\u2014tolerating bad habits drains energy from strategic priorities.",
         "question": "What bottlenecks, redundant habits & ineffective practices must we completely stop?",
         "points": [
           "Preventable operational mistakes and last-minute scrambles",
@@ -360,10 +416,10 @@ const tukioStrategyData = [
     "notes": "Facilitator-led activity: What brought about Tukio Konsult? Group discussion examining What Worked, What Can Be Improved, and What to Stop."
   },
   {
-    "id": 8,
+    "id": 10,
     "session": "The Journey",
     "sessionNum": 3,
-    "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
+    "category": "9:00 – 10:00 AM • SESSION 2: THE TUKIO JOURNEY",
     "title": "Moments in the Journey of Tukio Konsult",
     "subtitle": "Group Conversations: Let's share some moments in the journey of Tukio Konsult",
     "layout": "journey-points-8",
@@ -411,10 +467,10 @@ const tukioStrategyData = [
     "notes": "Open the floor for group reflection across each dimension. Anchor the conversation using the 4 debriefing questions."
   },
   {
-    "id": 9,
+    "id": 11,
     "session": "The Journey",
     "sessionNum": 3,
-    "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
+    "category": "9:00 – 10:00 AM • SESSION 2: THE TUKIO JOURNEY",
     "title": "START | STOP | CONTINUE",
     "subtitle": "For us to achieve our overall objectives in 5 Years, here are things we MUST:",
     "layout": "start-stop-continue-interactive",
@@ -427,7 +483,7 @@ const tukioStrategyData = [
         "phase": "Phase 1 of 3",
         "timeSeconds": 300,
         "prompt": "What new systems, initiatives, habits & standards must Tukio begin?",
-        "nextLabel": "Next: STOP \u2794"
+        "nextLabel": "Next: STOP ➔"
       },
       {
         "id": "stop",
@@ -436,7 +492,7 @@ const tukioStrategyData = [
         "phase": "Phase 2 of 3",
         "timeSeconds": 300,
         "prompt": "What bottlenecks, gaps, ineffective practices & habits must Tukio stop?",
-        "nextLabel": "Next: CONTINUE \u2794"
+        "nextLabel": "Next: CONTINUE ➔"
       },
       {
         "id": "continue",
@@ -445,17 +501,48 @@ const tukioStrategyData = [
         "phase": "Phase 3 of 3",
         "timeSeconds": 300,
         "prompt": "What winning approaches, core strengths & values must Tukio scale?",
-        "nextLabel": "Complete Discussion (Review All) \u2713"
+        "nextLabel": "Complete Discussion (Review All) ✓"
       }
     ],
     "takeaway": "Clarity on what to stop is just as critical as deciding what to start.",
     "notes": "Interactive START | STOP | CONTINUE card session. Each card has a round timer with play button and +/-1 minute adjusters."
   },
   {
-    "id": 10,
+    "id": 12,
     "session": "The Journey",
     "sessionNum": 3,
-    "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
+    "category": "9:00 – 10:00 AM • SESSION 2: THE TUKIO JOURNEY",
+    "title": "Things to Learn: Building Our Objectives Board",
+    "subtitle": "Core foundational principles & key insights before our discussion on Building Our Objectives Board",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Operational Objectives",
+        "icon": "ri-dashboard-line",
+        "insight": "Operational excellence relies on documented checklists and predictable delivery standards, not individual memory or heroics."
+      },
+      {
+        "num": 2,
+        "topic": "Strategic Objectives",
+        "icon": "ri-line-chart-line",
+        "insight": "Strategic targets bridge daily event coordination with multi-year institutional expansion and commercial resilience."
+      },
+      {
+        "num": 3,
+        "topic": "Ownership & Tracking",
+        "icon": "ri-check-double-line",
+        "insight": "An objective without a single named owner and a strict review cadence will never be executed."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 13,
+    "session": "The Journey",
+    "sessionNum": 3,
+    "category": "9:00 – 10:00 AM • SESSION 2: THE TUKIO JOURNEY",
     "title": "Building Our Objectives Board",
     "subtitle": "Group Activity: Let's build our operational and strategic objectives board",
     "layout": "talking-points-grid",
@@ -463,7 +550,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-dashboard-line",
         "title": "Operational Objectives",
-        "thingsToLearn": "Operational excellence relies on documented checklists and predictable delivery standards, not individual memory or heroics.",
         "question": "What immediate operational standards and delivery workflows must we set?",
         "points": [
           "Immediate service delivery standards and execution checklists",
@@ -474,7 +560,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-line-chart-line",
         "title": "Strategic Objectives",
-        "thingsToLearn": "Strategic targets bridge daily event coordination with multi-year institutional expansion and commercial resilience.",
         "question": "What 5-year organizational growth and market milestones must we achieve?",
         "points": [
           "5-Year market positioning and regional expansion targets",
@@ -485,7 +570,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-check-double-line",
         "title": "Ownership & Tracking",
-        "thingsToLearn": "An objective without a single named owner and a strict review cadence will never be executed.",
         "question": "Who owns each objective, and how will review cadence be structured?",
         "points": [
           "Assigned departmental and individual ownership for every objective",
@@ -498,18 +582,48 @@ const tukioStrategyData = [
     "notes": "Group Activity: Build the operational and strategic objectives board on the workshop wall/flipchart."
   },
   {
-    "id": 11,
+    "id": 14,
     "session": "Mentorship",
     "sessionNum": 4,
-    "category": "10:00 \u2013 10:40 AM \u2022 SESSION 3: MENTORSHIP",
+    "category": "10:00 – 10:40 AM • SESSION 3: MENTORSHIP",
+    "title": "Things to Learn: Mentorship Mr. Bankole",
+    "subtitle": "Core foundational principles & key insights before our discussion on Mentorship Session with Mr. Bankole",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Business Environment Overview",
+        "icon": "ri-global-line",
+        "insight": "Macroeconomic shifts and corporate budget constraints require event firms to operate with lean overhead and high commercial agility."
+      },
+      {
+        "num": 2,
+        "topic": "Institutional Systems & Scaling",
+        "icon": "ri-building-line",
+        "insight": "To scale beyond the founder's personal capacity, Tukio must embed systems, governance, and delegated authority."
+      },
+      {
+        "num": 3,
+        "topic": "Post-Mentorship Plenary",
+        "icon": "ri-question-answer-line",
+        "insight": "Mentorship produces real value only when insights are translated into concrete operational habits within our business."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 15,
+    "session": "Mentorship",
+    "sessionNum": 4,
+    "category": "10:00 – 10:40 AM • SESSION 3: MENTORSHIP",
     "title": "Mentorship Session with Mr. Bankole",
-    "subtitle": "Objective: To have an overview of the business environment \u2022 Lead: Mr. Bankole",
+    "subtitle": "Objective: To have an overview of the business environment • Lead: Mr. Bankole",
     "layout": "talking-points-grid",
     "cards": [
       {
         "icon": "ri-global-line",
         "title": "Business Environment Overview",
-        "thingsToLearn": "Macroeconomic shifts and corporate budget constraints require event firms to operate with lean overhead and high commercial agility.",
         "question": "What macro economic shifts and business dynamics impact Tukio today?",
         "points": [
           "Current macroeconomic climate and market realities",
@@ -520,7 +634,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-building-line",
         "title": "Institutional Systems & Scaling",
-        "thingsToLearn": "To scale beyond the founder's personal capacity, Tukio must embed systems, governance, and delegated authority.",
         "question": "How do we transition from founder-dependent operations to sustainable systems?",
         "points": [
           "Building resilient governance, operating structure & processes",
@@ -531,7 +644,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-question-answer-line",
         "title": "Post-Mentorship Plenary",
-        "thingsToLearn": "Mentorship produces real value only when insights are translated into concrete operational habits within our business.",
         "question": "What critical lessons are we implementing directly into Tukio Konsult?",
         "points": [
           "a. What did we learn from Mr. Bankole's perspective?",
@@ -544,30 +656,66 @@ const tukioStrategyData = [
     "notes": "Hand over to Mr. Bankole for his mentorship session, followed by the plenary discussion."
   },
   {
-    "id": 12,
+    "id": 16,
     "session": "Break",
     "sessionNum": 5,
-    "category": "10:40 \u2013 11:15 AM \u2022 BREAK",
+    "category": "10:40 – 11:15 AM • BREAK",
     "title": "Tea & Refreshments Break",
     "subtitle": "Time to recharge and engage in informal team conversations",
     "layout": "break-card",
-    "duration": "10:40 \u2013 11:15 AM (35 Minutes)",
+    "duration": "10:40 – 11:15 AM (35 Minutes)",
     "nextSession": "Up Next: Session 4: The Tukio Konsult Business Check (11:15 AM)",
     "notes": "Ensure participants refresh and resume on time at 11:15 AM."
   },
   {
-    "id": 13,
+    "id": 17,
     "session": "Health Check",
     "sessionNum": 6,
-    "category": "11:15 AM \u2013 12:00 PM \u2022 SESSION 4: BUSINESS HEALTH CHECK",
+    "category": "11:15 AM – 12:00 PM • SESSION 4: BUSINESS HEALTH CHECK",
+    "title": "Things to Learn: The Tukio Konsult Business Check",
+    "subtitle": "Core foundational principles & key insights before our discussion on The Tukio Konsult Business Check",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Operations",
+        "icon": "ri-settings-4-line",
+        "insight": "Operational health means zero surprises on event day—achieved through standardized vendor management and rigorous pre-event run-sheets."
+      },
+      {
+        "num": 2,
+        "topic": "Sales & Marketing",
+        "icon": "ri-megaphone-line",
+        "insight": "Predictable deal flow requires active lead tracking and consultative pitching rather than waiting passively for inbound calls."
+      },
+      {
+        "num": 3,
+        "topic": "Customer Experience",
+        "icon": "ri-customer-service-2-line",
+        "insight": "Customer delight must be engineered across every touchpoint, turning one-off clients into lifetime advocates and repeat accounts."
+      },
+      {
+        "num": 4,
+        "topic": "Finance and Admin",
+        "icon": "ri-bank-card-line",
+        "insight": "Cash flow discipline and timely milestone invoicing safeguard company liquidity and sustain long-term operational health."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 18,
+    "session": "Health Check",
+    "sessionNum": 6,
+    "category": "11:15 AM – 12:00 PM • SESSION 4: BUSINESS HEALTH CHECK",
     "title": "The Tukio Konsult Business Check",
-    "subtitle": "Tukio Konsult has been around for over a decade \u2022 Diagnosing our 4 Key Business Departments",
+    "subtitle": "Tukio Konsult has been around for over a decade • Diagnosing our 4 Key Business Departments",
     "layout": "talking-points-grid",
     "cards": [
       {
         "icon": "ri-settings-4-line",
         "title": "Operations",
-        "thingsToLearn": "Operational health means zero surprises on event day\u2014achieved through standardized vendor management and rigorous pre-event run-sheets.",
         "question": "What is healthy, unhealthy & the underlying problem?",
         "points": [
           "What is healthy in our event execution workflows?",
@@ -579,7 +727,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-megaphone-line",
         "title": "Sales & Marketing",
-        "thingsToLearn": "Predictable deal flow requires active lead tracking and consultative pitching rather than waiting passively for inbound calls.",
         "question": "What is healthy, unhealthy & the underlying problem?",
         "points": [
           "What is healthy in our pitch conversion & corporate reach?",
@@ -591,7 +738,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-customer-service-2-line",
         "title": "Customer Experience",
-        "thingsToLearn": "Customer delight must be engineered across every touchpoint, turning one-off clients into lifetime advocates and repeat accounts.",
         "question": "What is healthy, unhealthy & the underlying problem?",
         "points": [
           "What is healthy in client trust & on-site hospitality?",
@@ -603,7 +749,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-bank-card-line",
         "title": "Finance and Admin",
-        "thingsToLearn": "Cash flow discipline and timely milestone invoicing safeguard company liquidity and sustain long-term operational health.",
         "question": "What is healthy, unhealthy & the underlying problem?",
         "points": [
           "What is healthy in budgeting & expense controls?",
@@ -617,14 +762,14 @@ const tukioStrategyData = [
     "notes": "Introductory note: Tukio has existed for over a decade. Plenary discussion diagnosing the 4 key business operations departments: Operations, Sales & Marketing, Customer Experience, Finance & Admin."
   },
   {
-    "id": 14,
+    "id": 19,
     "session": "Health Check",
     "sessionNum": 6,
-    "category": "11:15 AM \u2013 12:00 PM \u2022 SESSION 4: BUSINESS HEALTH CHECK",
+    "category": "11:15 AM – 12:00 PM • SESSION 4: BUSINESS HEALTH CHECK",
     "title": "Tukio SWOT Analysis",
     "subtitle": "Group Activity: Let's Discuss TUKIO's SWOT (Turn SWOT into Decisions)",
     "layout": "swot-board-interactive",
-    "thingsToLearn": "SWOT is not four boxes of sticky notes\u2014it becomes valuable only when turned into decisions: leverage S, fix W, pursue O, and prepare for T.",
+    "thingsToLearn": "SWOT is not four boxes of sticky notes—it becomes valuable only when turned into decisions: leverage S, fix W, pursue O, and prepare for T.",
     "columns": [
       {
         "id": "strengths",
@@ -632,8 +777,8 @@ const tukioStrategyData = [
         "title": "STRENGTHS",
         "phase": "Phase 1 of 4",
         "timeSeconds": 300,
-        "prompt": "Internal things Tukio does well \u2022 Decision: S \u2794 What strengths can we leverage?",
-        "nextLabel": "Next: WEAKNESSES \u2794"
+        "prompt": "Internal things Tukio does well • Decision: S ➔ What strengths can we leverage?",
+        "nextLabel": "Next: WEAKNESSES ➔"
       },
       {
         "id": "weaknesses",
@@ -641,8 +786,8 @@ const tukioStrategyData = [
         "title": "WEAKNESSES",
         "phase": "Phase 2 of 4",
         "timeSeconds": 300,
-        "prompt": "Internal limitations \u2022 Decision: W \u2794 What weaknesses must we fix?",
-        "nextLabel": "Next: OPPORTUNITIES \u2794"
+        "prompt": "Internal limitations • Decision: W ➔ What weaknesses must we fix?",
+        "nextLabel": "Next: OPPORTUNITIES ➔"
       },
       {
         "id": "opportunities",
@@ -650,8 +795,8 @@ const tukioStrategyData = [
         "title": "OPPORTUNITIES",
         "phase": "Phase 3 of 4",
         "timeSeconds": 300,
-        "prompt": "External conditions Tukio can take advantage of \u2022 Decision: O \u2794 Which opportunities should we pursue?",
-        "nextLabel": "Next: THREATS \u2794"
+        "prompt": "External conditions Tukio can take advantage of • Decision: O ➔ Which opportunities should we pursue?",
+        "nextLabel": "Next: THREATS ➔"
       },
       {
         "id": "threats",
@@ -659,18 +804,49 @@ const tukioStrategyData = [
         "title": "THREATS",
         "phase": "Phase 4 of 4",
         "timeSeconds": 300,
-        "prompt": "External factors that could negatively affect the business \u2022 Decision: T \u2794 Which threats must we prepare for?",
-        "nextLabel": "Complete SWOT Discussion (Review All) \u2713"
+        "prompt": "External factors that could negatively affect the business • Decision: T ➔ Which threats must we prepare for?",
+        "nextLabel": "Complete SWOT Discussion (Review All) ✓"
       }
     ],
     "takeaway": "SWOT becomes useful only when we turn it into decisions.",
     "notes": "Interactive SWOT Analysis. Each quadrant card has a round timer with play button and +/-1 minute adjusters."
   },
   {
-    "id": 15,
+    "id": 20,
     "session": "Health Check",
     "sessionNum": 6,
-    "category": "11:15 AM \u2013 12:00 PM \u2022 SESSION 4: BUSINESS HEALTH CHECK",
+    "category": "11:15 AM – 12:00 PM • SESSION 4: BUSINESS HEALTH CHECK",
+    "title": "Things to Learn: Tukio 5 Strategy Issues Outlines",
+    "subtitle": "Core foundational principles & key insights before our discussion on Tukio 5 Strategy Issues Outlines",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Corporate Client Referrals",
+        "icon": "ri-user-shared-line",
+        "insight": "The most cost-effective business development channel is warm referrals from existing corporate clients who trust our execution."
+      },
+      {
+        "num": 2,
+        "topic": "The Top 5 Strategic Issues",
+        "icon": "ri-list-ordered",
+        "insight": "Focus requires sacrifice: identifying the five vital strategic issues forces the leadership team to prioritize what truly moves the needle."
+      },
+      {
+        "num": 3,
+        "topic": "Strategic Focus & Alignment",
+        "icon": "ri-target-line",
+        "insight": "Every strategic priority must directly improve customer delight, streamline operations, or accelerate commercial revenue."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 21,
+    "session": "Health Check",
+    "sessionNum": 6,
+    "category": "11:15 AM – 12:00 PM • SESSION 4: BUSINESS HEALTH CHECK",
     "title": "Tukio 5 Strategy Issues Outlines",
     "subtitle": "Plenary Discussion: Prioritizing Critical Strategy Focus Areas & Referrals",
     "layout": "talking-points-grid",
@@ -678,7 +854,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-user-shared-line",
         "title": "Corporate Client Referrals",
-        "thingsToLearn": "The most cost-effective business development channel is warm referrals from existing corporate clients who trust our execution.",
         "question": "How do we use existing relationships to generate corporate client referrals?",
         "points": [
           "Systematic post-event referral requests to corporate decision-makers",
@@ -689,7 +864,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-list-ordered",
         "title": "The Top 5 Strategic Issues",
-        "thingsToLearn": "Focus requires sacrifice: identifying the five vital strategic issues forces the leadership team to prioritize what truly moves the needle.",
         "question": "\"If we can only address FIVE things from everything identified today, what should they be?\"",
         "points": [
           "Synthesizing department health checks and SWOT decisions",
@@ -700,7 +874,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-target-line",
         "title": "Strategic Focus & Alignment",
-        "thingsToLearn": "Every strategic priority must directly improve customer delight, streamline operations, or accelerate commercial revenue.",
         "question": "What measurable impact will addressing these 5 issues unlock by 2027?",
         "points": [
           "Immediate reduction of internal operational friction",
@@ -713,18 +886,48 @@ const tukioStrategyData = [
     "notes": "Plenary discussion focusing on corporate referrals and selecting the top 5 strategic issues."
   },
   {
-    "id": 16,
+    "id": 22,
     "session": "Ownership",
     "sessionNum": 7,
-    "category": "12:00 \u2013 12:40 PM \u2022 SESSION 5: OWNERSHIP IN CHAOS",
+    "category": "12:00 – 12:40 PM • SESSION 5: OWNERSHIP IN CHAOS",
+    "title": "Things to Learn: Ownership in Chaos",
+    "subtitle": "Core foundational principles & key insights before our discussion on Ownership in Chaos",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "When Things Go Wrong",
+        "icon": "ri-alarm-warning-line",
+        "insight": "Under extreme event pressure, human instincts often default to panic or blame—recognizing this reaction is the first step to leadership control."
+      },
+      {
+        "num": 2,
+        "topic": "What Should Happen Instead",
+        "icon": "ri-shield-check-line",
+        "insight": "High-performing teams de-escalate crises through calm containment, rapid problem-solving, and clear client-facing reassurance."
+      },
+      {
+        "num": 3,
+        "topic": "The True Meaning of Ownership",
+        "icon": "ri-heart-pulse-line",
+        "insight": "Ownership is not taking blame for everything—it is taking 100% responsibility for everything within your circle of influence."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 23,
+    "session": "Ownership",
+    "sessionNum": 7,
+    "category": "12:00 – 12:40 PM • SESSION 5: OWNERSHIP IN CHAOS",
     "title": "Ownership in Chaos",
-    "subtitle": "Facilitator: Mr Folarin \u2022 Willingness to take responsibility for outcomes in difficulty",
+    "subtitle": "Facilitator: Mr Folarin • Willingness to take responsibility for outcomes in difficulty",
     "layout": "talking-points-grid",
     "cards": [
       {
         "icon": "ri-alarm-warning-line",
         "title": "When Things Go Wrong",
-        "thingsToLearn": "Under extreme event pressure, human instincts often default to panic or blame\u2014recognizing this reaction is the first step to leadership control.",
         "question": "\"When things go wrong at Tukio, what usually happens?\"",
         "points": [
           "Examining typical team reactions during high-pressure disruptions",
@@ -735,7 +938,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-shield-check-line",
         "title": "What Should Happen Instead",
-        "thingsToLearn": "High-performing teams de-escalate crises through calm containment, rapid problem-solving, and clear client-facing reassurance.",
         "question": "\"What should happen instead when high-stress disruptions occur?\"",
         "points": [
           "Immediate composure, containment, and clear team communication",
@@ -746,7 +948,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-heart-pulse-line",
         "title": "The True Meaning of Ownership",
-        "thingsToLearn": "Ownership is not taking blame for everything\u2014it is taking 100% responsibility for everything within your circle of influence.",
         "question": "How do we cultivate extreme ownership across every Tukio project?",
         "points": [
           "Ownership is not taking blame for everything",
@@ -759,18 +960,48 @@ const tukioStrategyData = [
     "notes": "Session led by Mr. Folarin. Post-session plenary discussion on ownership when things go wrong."
   },
   {
-    "id": 17,
+    "id": 24,
     "session": "Revenue",
     "sessionNum": 8,
-    "category": "12:40 \u2013 1:30 PM \u2022 SESSION 6: CLOSING LEADS & REVENUE",
+    "category": "12:40 – 1:30 PM • SESSION 6: CLOSING LEADS & REVENUE",
+    "title": "Things to Learn: Closing Leads & Revenue Generation",
+    "subtitle": "Core foundational principles & key insights before our discussion on Closing Leads & Revenue Generation",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Reflections & Obstacles",
+        "icon": "ri-file-search-line",
+        "insight": "Deals stall when clients sense uncertainty or perceive price without understanding the value and risk mitigation Tukio provides."
+      },
+      {
+        "num": 2,
+        "topic": "What Success Looks Like",
+        "icon": "ri-funds-line",
+        "insight": "Sales success is not merely getting inquiries—it is qualifying serious buyers, shortening the sales cycle, and securing prompt payment."
+      },
+      {
+        "num": 3,
+        "topic": "Diagnose Before You Prescribe",
+        "icon": "ri-stethoscope-line",
+        "insight": "A good salesperson doesn't rush to present a solution; they diagnose before they prescribe to uncover the client's true priorities."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 25,
+    "session": "Revenue",
+    "sessionNum": 8,
+    "category": "12:40 – 1:30 PM • SESSION 6: CLOSING LEADS & REVENUE",
     "title": "Closing Leads & Revenue Generation",
-    "subtitle": "Facilitator: Ms Jumoke \u2022 Moving prospects from interest to commitment and payment",
+    "subtitle": "Facilitator: Ms Jumoke • Moving prospects from interest to commitment and payment",
     "layout": "talking-points-grid",
     "cards": [
       {
         "icon": "ri-file-search-line",
         "title": "Reflections & Obstacles",
-        "thingsToLearn": "Deals stall when clients sense uncertainty or perceive price without understanding the value and risk mitigation Tukio provides.",
         "question": "\"What stood out for you, and what challenges have you experienced before this session?\"",
         "points": [
           "Where prospective client deals currently stall or drop off",
@@ -781,7 +1012,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-funds-line",
         "title": "What Success Looks Like",
-        "thingsToLearn": "Sales success is not merely getting inquiries\u2014it is qualifying serious buyers, shortening the sales cycle, and securing prompt payment.",
         "question": "\"What does success look like, and what strategies recommend more revenue?\"",
         "points": [
           "High conversion rate from initial inquiry to signed contract",
@@ -792,7 +1022,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-stethoscope-line",
         "title": "Diagnose Before You Prescribe",
-        "thingsToLearn": "A good salesperson doesn't rush to present a solution; they diagnose before they prescribe to uncover the client's true priorities.",
         "question": "How do we deeply diagnose client pain points before presenting a solution?",
         "points": [
           "A good salesperson doesn't rush to present a solution",
@@ -805,14 +1034,14 @@ const tukioStrategyData = [
     "notes": "Session led by Ms Jumoke. Post-session plenary exploring challenges, success metrics, and consultative selling."
   },
   {
-    "id": 18,
+    "id": 26,
     "session": "Revenue",
     "sessionNum": 8,
-    "category": "12:40 \u2013 1:30 PM \u2022 SESSION 6: CLOSING LEADS & REVENUE",
+    "category": "12:40 – 1:30 PM • SESSION 6: CLOSING LEADS & REVENUE",
     "title": "The Closing Room",
-    "subtitle": "Group Activity: Divide into pairs \u2022 One person is Tukio, the other is Client \u2022 5-Minute Challenge",
+    "subtitle": "Group Activity: Divide into pairs • One person is Tukio, the other is Client • 5-Minute Challenge",
     "layout": "closing-room-activity",
-    "thingsToLearn": "Objections are requests for clarity and value demonstration\u2014never drop price without adjusting scope or terms.",
+    "thingsToLearn": "Objections are requests for clarity and value demonstration—never drop price without adjusting scope or terms.",
     "timerSeconds": 300,
     "clients": [
       {
@@ -847,26 +1076,26 @@ const tukioStrategyData = [
     "notes": "Divide participants into pairs. Assign Client A, B, C, or D. 5 minutes to roleplay. Debrief on what worked."
   },
   {
-    "id": 19,
+    "id": 27,
     "session": "Lunch",
     "sessionNum": 9,
-    "category": "1:30 \u2013 2:30 PM \u2022 LUNCH & TEAM BONDING",
+    "category": "1:30 – 2:30 PM • LUNCH & TEAM BONDING",
     "title": "Lunch & Team Bonding Challenge",
     "subtitle": "Group Activity: Refresh, connect, and bond as a team",
     "layout": "break-card",
-    "duration": "1:30 \u2013 2:30 PM (60 Minutes)",
+    "duration": "1:30 – 2:30 PM (60 Minutes)",
     "nextSession": "Up Next: Session 7: Customer Retention and Experience Strategy (2:30 PM)",
     "notes": "Facilitate lunch and the team bonding challenge activity."
   },
   {
-    "id": 20,
+    "id": 28,
     "session": "Retention",
     "sessionNum": 10,
-    "category": "2:30 \u2013 3:30 PM \u2022 SESSION 7: CUSTOMER RETENTION & CX",
+    "category": "2:30 – 3:30 PM • SESSION 7: CUSTOMER RETENTION & CX",
     "title": "Customer Experience is the Whole Journey",
     "subtitle": "Objective: Understand how organization behaviour, operations & activities affect customers",
     "layout": "customer-journey-walk",
-    "thingsToLearn": "Customer experience spans all 7 touchpoints from discovery to post-event follow-up\u2014every touchpoint speaks volumes about Tukio.",
+    "thingsToLearn": "Customer experience spans all 7 touchpoints from discovery to post-event follow-up—every touchpoint speaks volumes about Tukio.",
     "introNote": "Getting a customer is one achievement; getting customers to: a. Return, b. Recommend Tukio, c. Trust Tukio for Bigger Jobs is another level of business success.",
     "stages": [
       {
@@ -924,14 +1153,45 @@ const tukioStrategyData = [
         "q": "What could make me recommend Tukio?"
       }
     ],
-    "takeaway": "A customer doesn't experience only the event \u2014 every touchpoint communicates something about Tukio.",
+    "takeaway": "A customer doesn't experience only the event — every touchpoint communicates something about Tukio.",
     "notes": "Group Activity: 'The Walk In My Shoes' game. Map each stage of the customer journey."
   },
   {
-    "id": 21,
+    "id": 29,
     "session": "Retention",
     "sessionNum": 10,
-    "category": "2:30 \u2013 3:30 PM \u2022 SESSION 7: CUSTOMER RETENTION & CX",
+    "category": "2:30 – 3:30 PM • SESSION 7: CUSTOMER RETENTION & CX",
+    "title": "Things to Learn: 9 Customer Retention Strategies",
+    "subtitle": "Core foundational principles & key insights before our discussion on 9 Customer Retention Strategies",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Experience Debrief",
+        "icon": "ri-compass-discover-line",
+        "insight": "Customer churn occurs where friction goes unnoticed; retention happens when deliberate moments of delight exceed expectations."
+      },
+      {
+        "num": 2,
+        "topic": "Retention Strategies (1 to 5)",
+        "icon": "ri-user-heart-line",
+        "insight": "The first 72 hours after an event determine whether a client becomes a repeat partner or forgets the relationship."
+      },
+      {
+        "num": 3,
+        "topic": "Retention Strategies (6 to 9)",
+        "icon": "ri-repeat-2-line",
+        "insight": "Don't let the relationship end when the invoice is paid—formal referral mechanisms and ongoing corporate check-ins build recurring retainers."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 30,
+    "session": "Retention",
+    "sessionNum": 10,
+    "category": "2:30 – 3:30 PM • SESSION 7: CUSTOMER RETENTION & CX",
     "title": "9 Customer Retention Strategies",
     "subtitle": "Turning Client Satisfaction into Repeat Business & Lifetime Advocacy",
     "layout": "talking-points-grid",
@@ -939,7 +1199,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-compass-discover-line",
         "title": "Experience Debrief",
-        "thingsToLearn": "Customer churn occurs where friction goes unnoticed; retention happens when deliberate moments of delight exceed expectations.",
         "question": "\"Where are we currently creating friction, and where are we creating delight?\"",
         "points": [
           "Identify touchpoints where clients experience anxiety or delays",
@@ -950,7 +1209,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-user-heart-line",
         "title": "Retention Strategies (1 to 5)",
-        "thingsToLearn": "The first 72 hours after an event determine whether a client becomes a repeat partner or forgets the relationship.",
         "question": "How do we maintain active relationships immediately after events?",
         "points": [
           "1. Follow up immediately after events",
@@ -963,7 +1221,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-repeat-2-line",
         "title": "Retention Strategies (6 to 9)",
-        "thingsToLearn": "Don't let the relationship end when the invoice is paid\u2014formal referral mechanisms and ongoing corporate check-ins build recurring retainers.",
         "question": "How do we turn past clients into referring advocates and annual retainers?",
         "points": [
           "6. Offer loyalty incentives where appropriate",
@@ -977,10 +1234,41 @@ const tukioStrategyData = [
     "notes": "Facilitate debrief on friction vs delight, then walk through the 9 retention strategies."
   },
   {
-    "id": 22,
+    "id": 31,
     "session": "Branding",
     "sessionNum": 11,
-    "category": "3:30 \u2013 4:15 PM \u2022 SESSION 8: BRANDING & VISIBILITY",
+    "category": "3:30 – 4:15 PM • SESSION 8: BRANDING & VISIBILITY",
+    "title": "Things to Learn: Branding, Marketing & Tukio Visibility",
+    "subtitle": "Core foundational principles & key insights before our discussion on Branding, Marketing & Tukio Visibility",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Brand Perception Plenary",
+        "icon": "ri-global-line",
+        "insight": "Our brand is not our logo—it is the perception people have based on experiences. When brand promise matches delivery, authority scales."
+      },
+      {
+        "num": 2,
+        "topic": "\"Why Choose Tukio?\"",
+        "icon": "ri-question-mark",
+        "insight": "Corporate clients choose event partners who demonstrate proven competence, reduce risk, and understand their organizational objectives."
+      },
+      {
+        "num": 3,
+        "topic": "Crafting Our Value Proposition",
+        "icon": "ri-award-line",
+        "insight": "A compelling value proposition answers who we serve, what unique outcome we guarantee, and why clients can trust us completely."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 32,
+    "session": "Branding",
+    "sessionNum": 11,
+    "category": "3:30 – 4:15 PM • SESSION 8: BRANDING & VISIBILITY",
     "title": "Branding, Marketing & Tukio Visibility",
     "subtitle": "Objective: Reshape the perception people have about Tukio Konsult's business",
     "layout": "talking-points-grid",
@@ -988,10 +1276,9 @@ const tukioStrategyData = [
       {
         "icon": "ri-global-line",
         "title": "Brand Perception Plenary",
-        "thingsToLearn": "Our brand is not our logo\u2014it is the perception people have based on experiences. When brand promise matches delivery, authority scales.",
         "question": "\"What's your satisfaction rate with Tukio's Brand Identities (Website & Social Media)?\"",
         "points": [
-          "Our brand is not our logo \u2014 a logo is just an identity element",
+          "Our brand is not our logo — a logo is just an identity element",
           "A brand is the perception people have based on experiences",
           "When Tukio promises exceptional events, the reality must match",
           "Examining what's working and what must change on digital channels"
@@ -1000,7 +1287,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-question-mark",
         "title": "\"Why Choose Tukio?\"",
-        "thingsToLearn": "Corporate clients choose event partners who demonstrate proven competence, reduce risk, and understand their organizational objectives.",
         "question": "\"Imagine a client received proposals from 5 event companies. Why choose Tukio?\"",
         "points": [
           "Who are we?",
@@ -1013,7 +1299,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-award-line",
         "title": "Crafting Our Value Proposition",
-        "thingsToLearn": "A compelling value proposition answers who we serve, what unique outcome we guarantee, and why clients can trust us completely.",
         "question": "How do we craft a compelling Value Proposition to wrap our brand around?",
         "points": [
           "Articulating our distinct value in 1-2 clear sentences",
@@ -1026,10 +1311,41 @@ const tukioStrategyData = [
     "notes": "Examine website and social media. Craft Tukio's Value Proposition through group activity."
   },
   {
-    "id": 23,
+    "id": 33,
     "session": "Branding",
     "sessionNum": 11,
-    "category": "3:30 \u2013 4:15 PM \u2022 SESSION 8: BRANDING & VISIBILITY",
+    "category": "3:30 – 4:15 PM • SESSION 8: BRANDING & VISIBILITY",
+    "title": "Things to Learn: Marketing Channels & 90 Days to Visibility",
+    "subtitle": "Core foundational principles & key insights before our discussion on Marketing Channels & 90 Days to Visibility",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Marketing Channels Review",
+        "icon": "ri-share-forward-line",
+        "insight": "Marketing is getting the right message to the right people through the right channels at the right time—focus on channels that generate revenue."
+      },
+      {
+        "num": 2,
+        "topic": "\"90 Days to Visibility\"",
+        "icon": "ri-calendar-event-line",
+        "insight": "Visibility compounds through structured consistency: combining authority content, targeted campaigns, and corporate partnerships."
+      },
+      {
+        "num": 3,
+        "topic": "Content That Converts",
+        "icon": "ri-video-line",
+        "insight": "Content should demonstrate: What we know + What we've done + What customers say + What we can do."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 34,
+    "session": "Branding",
+    "sessionNum": 11,
+    "category": "3:30 – 4:15 PM • SESSION 8: BRANDING & VISIBILITY",
     "title": "Marketing Channels & 90 Days to Visibility",
     "subtitle": "Getting the right message to the right people through the right channels at the right time",
     "layout": "talking-points-grid",
@@ -1037,7 +1353,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-share-forward-line",
         "title": "Marketing Channels Review",
-        "thingsToLearn": "Marketing is getting the right message to the right people through the right channels at the right time\u2014focus on channels that generate revenue.",
         "question": "\"Which channels have generated the most revenue, and which do we strengthen, stop, or start?\"",
         "points": [
           "Instagram, LinkedIn, WhatsApp & Targeted Email",
@@ -1048,7 +1363,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-calendar-event-line",
         "title": "\"90 Days to Visibility\"",
-        "thingsToLearn": "Visibility compounds through structured consistency: combining authority content, targeted campaigns, and corporate partnerships.",
         "question": "Group Activity: \"You have 90 days to make Tukio significantly more visible.\"",
         "points": [
           "Develop: 3 Content Ideas (demonstrating authority & mastery)",
@@ -1060,7 +1374,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-video-line",
         "title": "Content That Converts",
-        "thingsToLearn": "Content should demonstrate: What we know + What we've done + What customers say + What we can do.",
         "question": "How does our content prove our capability rather than just announce availability?",
         "points": [
           "What we know (industry expertise & thought leadership)",
@@ -1074,22 +1387,53 @@ const tukioStrategyData = [
     "notes": "Group Activity: 90 days to make Tukio visible. Formulate the 3 content ideas, 2 campaigns, 2 partnerships, 1 referral strategy."
   },
   {
-    "id": 24,
+    "id": 35,
     "session": "Break",
     "sessionNum": 12,
-    "category": "4:15 \u2013 4:30 PM \u2022 BREAK",
+    "category": "4:15 – 4:30 PM • BREAK",
     "title": "Afternoon Refreshment Break",
     "subtitle": "Quick 15-minute recharge before final revenue expansion & war room",
     "layout": "break-card",
-    "duration": "4:15 \u2013 4:30 PM (15 Minutes)",
+    "duration": "4:15 – 4:30 PM (15 Minutes)",
     "nextSession": "Up Next: Session 9: Revenue Expansion Beyond Event Planning (4:30 PM)",
     "notes": "Brief break to stretch and prepare for Revenue Expansion."
   },
   {
-    "id": 25,
+    "id": 36,
     "session": "Expansion",
     "sessionNum": 13,
-    "category": "4:30 \u2013 5:15 PM \u2022 SESSION 9: REVENUE EXPANSION",
+    "category": "4:30 – 5:15 PM • SESSION 9: REVENUE EXPANSION",
+    "title": "Things to Learn: Revenue Expansion Beyond Event Planning",
+    "subtitle": "Core foundational principles & key insights before our discussion on Revenue Expansion Beyond Event Planning",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Our Customer Base",
+        "icon": "ri-group-line",
+        "insight": "It costs 5x less to create more value for existing clients than to acquire new ones—mine existing relationships for untapped needs."
+      },
+      {
+        "num": 2,
+        "topic": "5 Ways to Generate Revenue",
+        "icon": "ri-hand-coin-line",
+        "insight": "Revenue expands across 5 paths: more customers, more frequent purchases, higher value per transaction, new services, and new markets."
+      },
+      {
+        "num": 3,
+        "topic": "Value Creation Mindset",
+        "icon": "ri-lightbulb-flash-line",
+        "insight": "Growth is our ability to create more value for the customers we already have by packaging advisory and retainer offerings."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 37,
+    "session": "Expansion",
+    "sessionNum": 13,
+    "category": "4:30 – 5:15 PM • SESSION 9: REVENUE EXPANSION",
     "title": "Revenue Expansion Beyond Event Planning",
     "subtitle": "Objective: Unpack various revenue streams of Tukio Konsult as a business",
     "layout": "talking-points-grid",
@@ -1097,7 +1441,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-group-line",
         "title": "Our Customer Base",
-        "thingsToLearn": "It costs 5x less to create more value for existing clients than to acquire new ones\u2014mine existing relationships for untapped needs.",
         "question": "\"Who are our customers, and what are we currently doing to keep them?\"",
         "points": [
           "Profiling existing corporate vs private event clients",
@@ -1108,7 +1451,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-hand-coin-line",
         "title": "5 Ways to Generate Revenue",
-        "thingsToLearn": "Revenue expands across 5 paths: more customers, more frequent purchases, higher value per transaction, new services, and new markets.",
         "question": "Which of the 5 growth paths are we looking to pursue to increase revenue, and how?",
         "points": [
           "a. More Customers (Acquire new corporate & institutional clients)",
@@ -1121,7 +1463,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-lightbulb-flash-line",
         "title": "Value Creation Mindset",
-        "thingsToLearn": "Growth is our ability to create more value for the customers we already have by packaging advisory and retainer offerings.",
         "question": "How do we transition from transactional event gigs to ongoing value creation?",
         "points": [
           "Growth isn't just our ability to get more customers",
@@ -1134,10 +1475,10 @@ const tukioStrategyData = [
     "notes": "Plenary discussion exploring the 5 ways to generate revenue at Tukio."
   },
   {
-    "id": 26,
+    "id": 38,
     "session": "Expansion",
     "sessionNum": 13,
-    "category": "4:30 \u2013 5:15 PM \u2022 SESSION 9: REVENUE EXPANSION",
+    "category": "4:30 – 5:15 PM • SESSION 9: REVENUE EXPANSION",
     "title": "The TUKIO Money Tree",
     "subtitle": "Group Activity: \"What else can Tukio sell?\" (Branches = Other Values We Offer)",
     "layout": "money-tree-activity",
@@ -1193,14 +1534,14 @@ const tukioStrategyData = [
     "notes": "Group Activity: The TUKIO Money Tree. Debriefing: Solve more of the customer's problems, and money will come."
   },
   {
-    "id": 27,
+    "id": 39,
     "session": "War Room",
     "sessionNum": 14,
-    "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
+    "category": "5:15 – 5:45 PM • SESSION 9: STRATEGY WAR ROOM",
     "title": "Strategy War Room: Strategy is Where Ideas Become Choices",
     "subtitle": "Objective: Put all our deliberation together & subject every priority to the 5-point test",
     "layout": "priority-test-grid",
-    "introNote": "By this stage, the team has discussed: Journey \u2192 SWOT \u2192 Ownership \u2192 Sales \u2192 Customer \u2192 Brand \u2192 Revenue. Now, \"What are the most important things we need to do next?\"",
+    "introNote": "By this stage, the team has discussed: Journey → SWOT → Ownership → Sales → Customer → Brand → Revenue. Now, \"What are the most important things we need to do next?\"",
     "thingsToLearn": "Strategy is where ideas become choices. For every strategy we will agree upon today, we must subject it to the 5-point Priority Test.",
     "tests": [
       {
@@ -1233,10 +1574,10 @@ const tukioStrategyData = [
     "notes": "Introductory note & the 5 Priority Tests (Impact, Urgency, Feasibility, Ownership, Measurement)."
   },
   {
-    "id": 28,
+    "id": 40,
     "session": "War Room",
     "sessionNum": 14,
-    "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
+    "category": "5:15 – 5:45 PM • SESSION 9: STRATEGY WAR ROOM",
     "title": "Compiling Our Work: 5 Strategic Focus Areas",
     "subtitle": "Group Activity: Aligning our work across 5 Pillars & answering the 5 Core Strategic Questions",
     "layout": "compiling-strategy-grid",
@@ -1291,18 +1632,18 @@ const tukioStrategyData = [
       },
       {
         "label": "Accountability",
-        "question": "Who\u2019s responsible?",
+        "question": "Who’s responsible?",
         "desc": "Designated departmental owner and team lead driving execution."
       }
     ],
-    "takeaway": "Where are we? Where do we want to go? What must we do? How will we measure success? Who\u2019s responsible?",
+    "takeaway": "Where are we? Where do we want to go? What must we do? How will we measure success? Who’s responsible?",
     "notes": "Group Activity: Compile all deliberations across the 5 pillars and debate the 5 strategic questions."
   },
   {
-    "id": 29,
+    "id": 41,
     "session": "War Room",
     "sessionNum": 14,
-    "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
+    "category": "5:15 – 5:45 PM • SESSION 9: STRATEGY WAR ROOM",
     "title": "Tukio Strategic Planning Matrix",
     "subtitle": "From Ideas to Priorities: Populating the 10 Sections of the Master Execution Matrix",
     "layout": "matrix-framework",
@@ -1353,10 +1694,41 @@ const tukioStrategyData = [
     "notes": "Group Strategy War Room: Convert today's deliberations into the 10 sections of the Strategic Planning Matrix."
   },
   {
-    "id": 30,
+    "id": 42,
     "session": "Closing",
     "sessionNum": 15,
-    "category": "5:45 \u2013 6:00 PM \u2022 COMMITMENTS & CLOSING",
+    "category": "5:45 – 6:00 PM • COMMITMENTS & CLOSING",
+    "title": "Things to Learn: Commitments, Next Steps & Closing",
+    "subtitle": "Core foundational principles & key insights before our discussion on Commitments, Next Steps & Closing",
+    "layout": "things-to-learn-overview",
+    "items": [
+      {
+        "num": 1,
+        "topic": "Team Commitments",
+        "icon": "ri-check-line",
+        "insight": "Execution begins tomorrow morning: individual commitment to immediate priorities transforms strategic intent into operational reality."
+      },
+      {
+        "num": 2,
+        "topic": "Documentation & Communique",
+        "icon": "ri-file-list-3-line",
+        "insight": "Clear documentation within 48 hours locks in consensus and prevents strategic drift."
+      },
+      {
+        "num": 3,
+        "topic": "Follow-Up Cadence",
+        "icon": "ri-calendar-check-line",
+        "insight": "Strategy is kept alive only through disciplined monthly milestones and quarterly leadership reviews."
+      }
+    ],
+    "takeaway": "Mastering these principles ensures our discussion produces actionable decisions, not just conversation.",
+    "notes": "Facilitator Guide: Introduce these key principles first to set the strategic context before moving into the interactive discussion."
+  },
+  {
+    "id": 43,
+    "session": "Closing",
+    "sessionNum": 15,
+    "category": "5:45 – 6:00 PM • COMMITMENTS & CLOSING",
     "title": "Commitments, Next Steps & Closing",
     "subtitle": "Lead: Facilitator-Led / Management",
     "layout": "talking-points-grid",
@@ -1364,7 +1736,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-check-line",
         "title": "Team Commitments",
-        "thingsToLearn": "Execution begins tomorrow morning: individual commitment to immediate priorities transforms strategic intent into operational reality.",
         "question": "\"What are our immediate agreed personal and departmental action commitments?\"",
         "points": [
           "Personal and departmental action commitments for Q4 2026",
@@ -1375,7 +1746,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-file-list-3-line",
         "title": "Documentation & Communique",
-        "thingsToLearn": "Clear documentation within 48 hours locks in consensus and prevents strategic drift.",
         "question": "How will the session communique and implementation matrix be circulated?",
         "points": [
           "Circulation of strategy session summary report within 48 hours",
@@ -1386,7 +1756,6 @@ const tukioStrategyData = [
       {
         "icon": "ri-calendar-check-line",
         "title": "Follow-Up Cadence",
-        "thingsToLearn": "Strategy is kept alive only through disciplined monthly milestones and quarterly leadership reviews.",
         "question": "What monthly and quarterly review cadence will keep this strategy alive?",
         "points": [
           "Monthly review meetings to assess milestone execution",
@@ -1400,4 +1769,6 @@ const tukioStrategyData = [
   }
 ];
 
-if (typeof module !== "undefined") { module.exports = tukioStrategyData; }
+if (typeof module !== "undefined") {
+  module.exports = tukioStrategyData;
+}

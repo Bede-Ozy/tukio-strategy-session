@@ -994,6 +994,7 @@ body.is-fullscreen .app-header:hover {
   color: #FFFFFF;
   line-height: 1;
   text-shadow: 0 0 25px rgba(255, 107, 0, 0.5);
+  user-select: none;
 }
 
 .timer-controls {
@@ -1014,6 +1015,10 @@ body.is-fullscreen .app-header:hover {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.timer-action-btn i {
+  pointer-events: none;
 }
 
 .timer-action-btn:hover {
@@ -1974,8 +1979,8 @@ body.is-fullscreen .app-header:hover {
   color: var(--brand-orange);
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
-  font-size: 1.25rem;
-  padding: 14px 24px;
+  font-size: 1.55rem;
+  padding: 18px 26px;
   text-align: left;
   border-bottom: 2px solid var(--border-color);
   text-transform: uppercase;
@@ -1983,7 +1988,7 @@ body.is-fullscreen .app-header:hover {
 }
 
 .agenda-schedule-table td {
-  padding: 12px 24px;
+  padding: 16px 26px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -2020,11 +2025,11 @@ body.is-fullscreen .app-header:hover {
   flex: 1;
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 18px;
-  padding: 22px 22px;
+  border-radius: 20px;
+  padding: 28px 26px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   box-shadow: var(--shadow-premium);
   transition: transform 0.25s, border-color 0.25s;
 }
@@ -2035,47 +2040,47 @@ body.is-fullscreen .app-header:hover {
 }
 
 .card-top-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   background: rgba(255, 107, 0, 0.12);
   color: var(--brand-orange);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   flex-shrink: 0;
 }
 
 .card-topic-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.85rem;
+  font-size: 2.1rem;
   font-weight: 800;
   color: #FFFFFF;
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
 .card-points-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 4px;
+  gap: 12px;
+  margin-top: 6px;
 }
 
 .point-row {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: flex-start;
-  font-size: 1.22rem;
-  line-height: 1.38;
+  font-size: 1.4rem;
+  line-height: 1.48;
   color: var(--text-main);
 }
 
 .point-bullet {
   color: var(--brand-orange);
   font-weight: 900;
-  font-size: 1.4rem;
-  line-height: 1;
+  font-size: 1.55rem;
+  line-height: 1.1;
 }
 
 .point-text {
@@ -2430,6 +2435,8 @@ body.is-fullscreen .app-header:hover {
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  cursor: pointer;
+  user-select: none;
 }
 
 .swot-interactive-cards-row .round-timer-dial {
@@ -2575,6 +2582,11 @@ body.is-fullscreen .app-header:hover {
 
 .round-play-btn.running:hover {
   background: #4B5563;
+}
+
+.round-play-btn i,
+.round-reset-btn i {
+  pointer-events: none;
 }
 
 .round-reset-btn {
@@ -3097,11 +3109,11 @@ body.is-fullscreen .app-header:hover {
   background: rgba(255, 107, 0, 0.09);
   border: 1px solid rgba(255, 107, 0, 0.32);
   border-left: 4px solid var(--brand-orange);
-  padding: 9px 13px;
-  border-radius: 10px;
+  padding: 14px 18px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   margin-bottom: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
@@ -3109,9 +3121,9 @@ body.is-fullscreen .app-header:hover {
 .question-header {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.76rem;
+  font-size: 0.92rem;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--brand-orange);
@@ -3119,10 +3131,10 @@ body.is-fullscreen .app-header:hover {
 }
 
 .question-text {
-  font-size: 1.22rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #FBBF24;
-  line-height: 1.35;
+  line-height: 1.38;
 }
 
 [data-theme="light"] .card-discussion-question {
@@ -3312,12 +3324,12 @@ body.is-fullscreen .app-header:hover {
   border: 1px solid var(--card-border);
   border-top: 4px solid var(--brand-orange);
   border-radius: 12px;
-  padding: 14px 10px;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 4px;
+  gap: 6px;
   transition: transform 0.2s;
   box-shadow: var(--shadow-premium);
 }
@@ -3329,14 +3341,14 @@ body.is-fullscreen .app-header:hover {
 
 .cj-stage-num {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.82rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--brand-orange);
 }
 
 .cj-stage-name {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #FFFFFF;
 }
@@ -3344,34 +3356,156 @@ body.is-fullscreen .app-header:hover {
 .cj-questions-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 18px;
 }
 
 .cj-question-card {
   background: rgba(17, 24, 39, 0.65);
   border: 1px solid var(--card-border);
   border-radius: 14px;
-  padding: 16px 20px;
+  padding: 18px 22px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   box-shadow: var(--shadow-premium);
 }
 
 .cj-q-tag {
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--brand-orange);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .cj-q-text {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #FFFFFF;
   line-height: 1.35;
+}
+
+/* ==========================================================================
+   THINGS TO LEARN OVERVIEW (DEDICATED FOUNDATION SLIDE)
+   ========================================================================== */
+.ttl-overview-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.ttl-overview-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.ttl-overview-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-top: 4px solid var(--brand-orange);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: var(--shadow-premium);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ttl-overview-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-orange);
+  box-shadow: 0 12px 32px rgba(255, 107, 0, 0.18);
+}
+
+.ttl-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ttl-card-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 107, 0, 0.12);
+  border: 1px solid rgba(255, 107, 0, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.ttl-badge-num {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--brand-orange);
+}
+
+.ttl-badge-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: #FFA500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ttl-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--brand-blue-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+.ttl-card-topic {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.22;
+}
+
+.ttl-card-body {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.025);
+  border-left: 3px solid #38BDF8;
+  padding: 18px 20px;
+  border-radius: 10px;
+}
+
+.ttl-card-insight {
+  font-size: 1.42rem;
+  line-height: 1.55;
+  color: #F1F5F9;
+  font-weight: 500;
+}
+
+[data-theme="light"] .ttl-overview-card {
+  background: #FFFFFF;
+  border-color: #E2E8F0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .ttl-card-topic {
+  color: #0F172A;
+}
+
+[data-theme="light"] .ttl-card-body {
+  background: rgba(14, 165, 233, 0.06);
+}
+
+[data-theme="light"] .ttl-card-insight {
+  color: #1E293B;
 }
 
 /* ==========================================================================
@@ -3762,7 +3896,7 @@ body.is-fullscreen .app-header:hover {
 .purpose-pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
   flex: 1;
   align-content: center;
 }
@@ -3771,10 +3905,10 @@ body.is-fullscreen .app-header:hover {
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  padding: 18px 20px;
+  padding: 22px 24px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
@@ -3792,13 +3926,13 @@ body.is-fullscreen .app-header:hover {
 }
 
 .purpose-letter-badge {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background: rgba(255, 107, 0, 0.15);
   color: var(--brand-orange);
   font-family: 'Outfit', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -3807,12 +3941,12 @@ body.is-fullscreen .app-header:hover {
 }
 
 .purpose-icon-box {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background: rgba(59, 130, 246, 0.15);
   color: var(--brand-blue-hover);
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3821,15 +3955,16 @@ body.is-fullscreen .app-header:hover {
 
 .purpose-card-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   font-weight: 800;
   color: #FFFFFF;
+  line-height: 1.25;
 }
 
 .purpose-card-desc {
-  font-size: 1.05rem;
-  line-height: 1.45;
-  color: var(--text-muted);
+  font-size: 1.28rem;
+  line-height: 1.5;
+  color: #CBD5E1;
 }
 
 /* ==========================================================================
@@ -3853,10 +3988,10 @@ body.is-fullscreen .app-header:hover {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   border-radius: 18px;
-  padding: 22px 24px;
+  padding: 24px 26px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   box-shadow: var(--shadow-premium);
 }
 
@@ -3871,18 +4006,18 @@ body.is-fullscreen .app-header:hover {
 .split-col-header {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding-bottom: 12px;
+  gap: 16px;
+  padding-bottom: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .split-header-icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   background: rgba(255, 107, 0, 0.15);
   color: var(--brand-orange);
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3896,13 +4031,13 @@ body.is-fullscreen .app-header:hover {
 
 .split-col-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.55rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: #FFFFFF;
 }
 
 .split-col-sub {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   font-style: italic;
 }
@@ -3910,31 +4045,32 @@ body.is-fullscreen .app-header:hover {
 .split-col-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   flex: 1;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .split-list-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
   transition: background 0.2s;
 }
 
 .split-list-item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .split-item-letter {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--brand-orange);
-  min-width: 22px;
+  min-width: 26px;
+  line-height: 1.35;
 }
 
 .out-item .split-item-letter {
@@ -3942,9 +4078,10 @@ body.is-fullscreen .app-header:hover {
 }
 
 .split-item-text {
-  font-size: 1.02rem;
-  line-height: 1.4;
-  color: #E2E8F0;
+  font-size: 1.28rem;
+  line-height: 1.45;
+  color: #F1F5F9;
+  font-weight: 500;
 }
 
 /* ==========================================================================
