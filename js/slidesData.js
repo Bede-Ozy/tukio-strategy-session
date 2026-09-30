@@ -109,6 +109,136 @@ const tukioStrategyData = [
     "id": 3,
     "session": "Agenda",
     "sessionNum": 1,
+    "category": "STRATEGY SESSION PLAN \u2022 SECTION 2",
+    "title": "Purpose of the Strategy Session",
+    "subtitle": "The Purpose of the Tukio Konsults 2026 Strategy Session",
+    "layout": "purpose-pillars-grid",
+    "thingsToLearn": "A strategy session aligns team identity, analyzes past lessons, and sets a disciplined accountability framework for 2026.",
+    "pillars": [
+      {
+        "letter": "a",
+        "icon": "ri-team-line",
+        "title": "Team & Identity Alignment",
+        "desc": "Strengthen the team's understanding of the company\u2019s identity, operations, values, and direction."
+      },
+      {
+        "letter": "b",
+        "icon": "ri-history-line",
+        "title": "Growth Journey & Lessons",
+        "desc": "Review the company\u2019s growth journey, achievements, lessons, and operational performance."
+      },
+      {
+        "letter": "c",
+        "icon": "ri-compass-3-line",
+        "title": "2026 Strategic Vision",
+        "desc": "Align all team members on the company\u2019s 2026 strategic vision and priorities."
+      },
+      {
+        "letter": "d",
+        "icon": "ri-funds-line",
+        "title": "Actionable Growth Strategies",
+        "desc": "Develop actionable strategies to improve financial sustainability, visibility, client retention, expansion, and staff development."
+      },
+      {
+        "letter": "e",
+        "icon": "ri-user-settings-line",
+        "title": "Roles & Accountability",
+        "desc": "Define clear roles, responsibilities, resource requirements, and accountability systems necessary for successful implementation."
+      },
+      {
+        "letter": "f",
+        "icon": "ri-line-chart-line",
+        "title": "Tracking & Monitoring",
+        "desc": "Establish measurable progress tracking and monitoring mechanisms for organizational growth."
+      }
+    ],
+    "takeaway": "Clarity of purpose drives alignment, execution discipline, and measurable growth.",
+    "notes": "Section 2 of the Strategy Session Plan: Purpose of the Strategy Session (Points a to f)."
+  },
+  {
+    "id": 4,
+    "session": "Agenda",
+    "sessionNum": 1,
+    "category": "STRATEGY SESSION PLAN \u2022 SECTION 3",
+    "title": "Objectives & Expected Outcomes",
+    "subtitle": "Defining Our Strategic Intent and Concrete Tangible Deliverables",
+    "layout": "objectives-outcomes-split",
+    "thingsToLearn": "Objectives define our intent today; Expected Outcomes ensure we depart with documented, actionable deliverables.",
+    "objectives": {
+      "title": "Objectives",
+      "subtitle": "The strategy session aims to:",
+      "items": [
+        {
+          "letter": "a",
+          "text": "Improve team alignment and organizational understanding."
+        },
+        {
+          "letter": "b",
+          "text": "Review the company\u2019s operational and strategic performance over previous years."
+        },
+        {
+          "letter": "c",
+          "text": "Clarify and communicate the company\u2019s 2026 vision."
+        },
+        {
+          "letter": "d",
+          "text": "Identify strengths, gaps, opportunities, and growth areas across the organization."
+        },
+        {
+          "letter": "e",
+          "text": "Develop practical strategies and action plans toward achieving organizational goals."
+        },
+        {
+          "letter": "f",
+          "text": "Assign responsibilities and ownership for strategic initiatives."
+        }
+      ]
+    },
+    "outcomes": {
+      "title": "Expected Outcomes",
+      "subtitle": "At the end of the session, the company should have:",
+      "items": [
+        {
+          "letter": "a",
+          "text": "A unified understanding of Tukio Konsults\u2019 mission, vision, operations, and direction."
+        },
+        {
+          "letter": "b",
+          "text": "A documented summary of organizational progress, achievements, and lessons learned."
+        },
+        {
+          "letter": "c",
+          "text": "Clearly defined strategic priorities for 2026."
+        },
+        {
+          "letter": "d",
+          "text": "Actionable implementation strategies for each focus area."
+        },
+        {
+          "letter": "e",
+          "text": "Defined resource requirements for execution."
+        },
+        {
+          "letter": "f",
+          "text": "Assigned responsibilities and accountability structures."
+        },
+        {
+          "letter": "g",
+          "text": "Agreed timelines and measurable success indicators."
+        },
+        {
+          "letter": "h",
+          "text": "A framework for monitoring, evaluation, and follow-up."
+        }
+      ]
+    },
+    "takeaway": "From clear objectives to tangible outcomes: building the institutional foundation of Tukio Konsults.",
+    "notes": "Section 3 of the Strategy Session Plan: Objectives (a to f) and Expected Outcomes (a to h)."
+  },
+  {
+    "id": 5,
+    "session": "Agenda",
+    "sessionNum": 1,
     "category": "8:00 \u2013 8:30 AM \u2022 ARRIVAL & WELCOME",
     "title": "Arrival & Welcome Address",
     "subtitle": "Lead: Facilitator / Mrs. Fisayo Olabisi",
@@ -151,7 +281,7 @@ const tukioStrategyData = [
     "notes": "State the purpose and objectives of the strategy session."
   },
   {
-    "id": 4,
+    "id": 6,
     "session": "Energiser",
     "sessionNum": 2,
     "category": "8:30 \u2013 9:00 AM \u2022 SESSION 1: OPENING & ENERGIZER",
@@ -181,7 +311,7 @@ const tukioStrategyData = [
     "notes": "Participants pair up for 5 minutes. Question 1: Introduce partner and share response. Question 2: Capture responses on flipchart."
   },
   {
-    "id": 5,
+    "id": 7,
     "session": "The Journey",
     "sessionNum": 3,
     "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
@@ -230,7 +360,7 @@ const tukioStrategyData = [
     "notes": "Facilitator-led activity: What brought about Tukio Konsult? Group discussion examining What Worked, What Can Be Improved, and What to Stop."
   },
   {
-    "id": 6,
+    "id": 8,
     "session": "The Journey",
     "sessionNum": 3,
     "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
@@ -281,7 +411,7 @@ const tukioStrategyData = [
     "notes": "Open the floor for group reflection across each dimension. Anchor the conversation using the 4 debriefing questions."
   },
   {
-    "id": 7,
+    "id": 9,
     "session": "The Journey",
     "sessionNum": 3,
     "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
@@ -322,7 +452,7 @@ const tukioStrategyData = [
     "notes": "Interactive START | STOP | CONTINUE card session. Each card has a round timer with play button and +/-1 minute adjusters."
   },
   {
-    "id": 8,
+    "id": 10,
     "session": "The Journey",
     "sessionNum": 3,
     "category": "9:00 \u2013 10:00 AM \u2022 SESSION 2: THE TUKIO JOURNEY",
@@ -368,7 +498,7 @@ const tukioStrategyData = [
     "notes": "Group Activity: Build the operational and strategic objectives board on the workshop wall/flipchart."
   },
   {
-    "id": 9,
+    "id": 11,
     "session": "Mentorship",
     "sessionNum": 4,
     "category": "10:00 \u2013 10:40 AM \u2022 SESSION 3: MENTORSHIP",
@@ -414,7 +544,7 @@ const tukioStrategyData = [
     "notes": "Hand over to Mr. Bankole for his mentorship session, followed by the plenary discussion."
   },
   {
-    "id": 10,
+    "id": 12,
     "session": "Break",
     "sessionNum": 5,
     "category": "10:40 \u2013 11:15 AM \u2022 BREAK",
@@ -426,7 +556,7 @@ const tukioStrategyData = [
     "notes": "Ensure participants refresh and resume on time at 11:15 AM."
   },
   {
-    "id": 11,
+    "id": 13,
     "session": "Health Check",
     "sessionNum": 6,
     "category": "11:15 AM \u2013 12:00 PM \u2022 SESSION 4: BUSINESS HEALTH CHECK",
@@ -487,7 +617,7 @@ const tukioStrategyData = [
     "notes": "Introductory note: Tukio has existed for over a decade. Plenary discussion diagnosing the 4 key business operations departments: Operations, Sales & Marketing, Customer Experience, Finance & Admin."
   },
   {
-    "id": 12,
+    "id": 14,
     "session": "Health Check",
     "sessionNum": 6,
     "category": "11:15 AM \u2013 12:00 PM \u2022 SESSION 4: BUSINESS HEALTH CHECK",
@@ -537,7 +667,7 @@ const tukioStrategyData = [
     "notes": "Interactive SWOT Analysis. Each quadrant card has a round timer with play button and +/-1 minute adjusters."
   },
   {
-    "id": 13,
+    "id": 15,
     "session": "Health Check",
     "sessionNum": 6,
     "category": "11:15 AM \u2013 12:00 PM \u2022 SESSION 4: BUSINESS HEALTH CHECK",
@@ -583,7 +713,7 @@ const tukioStrategyData = [
     "notes": "Plenary discussion focusing on corporate referrals and selecting the top 5 strategic issues."
   },
   {
-    "id": 14,
+    "id": 16,
     "session": "Ownership",
     "sessionNum": 7,
     "category": "12:00 \u2013 12:40 PM \u2022 SESSION 5: OWNERSHIP IN CHAOS",
@@ -629,7 +759,7 @@ const tukioStrategyData = [
     "notes": "Session led by Mr. Folarin. Post-session plenary discussion on ownership when things go wrong."
   },
   {
-    "id": 15,
+    "id": 17,
     "session": "Revenue",
     "sessionNum": 8,
     "category": "12:40 \u2013 1:30 PM \u2022 SESSION 6: CLOSING LEADS & REVENUE",
@@ -675,7 +805,7 @@ const tukioStrategyData = [
     "notes": "Session led by Ms Jumoke. Post-session plenary exploring challenges, success metrics, and consultative selling."
   },
   {
-    "id": 16,
+    "id": 18,
     "session": "Revenue",
     "sessionNum": 8,
     "category": "12:40 \u2013 1:30 PM \u2022 SESSION 6: CLOSING LEADS & REVENUE",
@@ -717,7 +847,7 @@ const tukioStrategyData = [
     "notes": "Divide participants into pairs. Assign Client A, B, C, or D. 5 minutes to roleplay. Debrief on what worked."
   },
   {
-    "id": 17,
+    "id": 19,
     "session": "Lunch",
     "sessionNum": 9,
     "category": "1:30 \u2013 2:30 PM \u2022 LUNCH & TEAM BONDING",
@@ -729,7 +859,7 @@ const tukioStrategyData = [
     "notes": "Facilitate lunch and the team bonding challenge activity."
   },
   {
-    "id": 18,
+    "id": 20,
     "session": "Retention",
     "sessionNum": 10,
     "category": "2:30 \u2013 3:30 PM \u2022 SESSION 7: CUSTOMER RETENTION & CX",
@@ -798,7 +928,7 @@ const tukioStrategyData = [
     "notes": "Group Activity: 'The Walk In My Shoes' game. Map each stage of the customer journey."
   },
   {
-    "id": 19,
+    "id": 21,
     "session": "Retention",
     "sessionNum": 10,
     "category": "2:30 \u2013 3:30 PM \u2022 SESSION 7: CUSTOMER RETENTION & CX",
@@ -847,7 +977,7 @@ const tukioStrategyData = [
     "notes": "Facilitate debrief on friction vs delight, then walk through the 9 retention strategies."
   },
   {
-    "id": 20,
+    "id": 22,
     "session": "Branding",
     "sessionNum": 11,
     "category": "3:30 \u2013 4:15 PM \u2022 SESSION 8: BRANDING & VISIBILITY",
@@ -896,7 +1026,7 @@ const tukioStrategyData = [
     "notes": "Examine website and social media. Craft Tukio's Value Proposition through group activity."
   },
   {
-    "id": 21,
+    "id": 23,
     "session": "Branding",
     "sessionNum": 11,
     "category": "3:30 \u2013 4:15 PM \u2022 SESSION 8: BRANDING & VISIBILITY",
@@ -944,7 +1074,7 @@ const tukioStrategyData = [
     "notes": "Group Activity: 90 days to make Tukio visible. Formulate the 3 content ideas, 2 campaigns, 2 partnerships, 1 referral strategy."
   },
   {
-    "id": 22,
+    "id": 24,
     "session": "Break",
     "sessionNum": 12,
     "category": "4:15 \u2013 4:30 PM \u2022 BREAK",
@@ -956,7 +1086,7 @@ const tukioStrategyData = [
     "notes": "Brief break to stretch and prepare for Revenue Expansion."
   },
   {
-    "id": 23,
+    "id": 25,
     "session": "Expansion",
     "sessionNum": 13,
     "category": "4:30 \u2013 5:15 PM \u2022 SESSION 9: REVENUE EXPANSION",
@@ -1004,7 +1134,7 @@ const tukioStrategyData = [
     "notes": "Plenary discussion exploring the 5 ways to generate revenue at Tukio."
   },
   {
-    "id": 24,
+    "id": 26,
     "session": "Expansion",
     "sessionNum": 13,
     "category": "4:30 \u2013 5:15 PM \u2022 SESSION 9: REVENUE EXPANSION",
@@ -1063,7 +1193,7 @@ const tukioStrategyData = [
     "notes": "Group Activity: The TUKIO Money Tree. Debriefing: Solve more of the customer's problems, and money will come."
   },
   {
-    "id": 25,
+    "id": 27,
     "session": "War Room",
     "sessionNum": 14,
     "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
@@ -1103,7 +1233,7 @@ const tukioStrategyData = [
     "notes": "Introductory note & the 5 Priority Tests (Impact, Urgency, Feasibility, Ownership, Measurement)."
   },
   {
-    "id": 26,
+    "id": 28,
     "session": "War Room",
     "sessionNum": 14,
     "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
@@ -1169,7 +1299,7 @@ const tukioStrategyData = [
     "notes": "Group Activity: Compile all deliberations across the 5 pillars and debate the 5 strategic questions."
   },
   {
-    "id": 27,
+    "id": 29,
     "session": "War Room",
     "sessionNum": 14,
     "category": "5:15 \u2013 5:45 PM \u2022 SESSION 9: STRATEGY WAR ROOM",
@@ -1223,7 +1353,7 @@ const tukioStrategyData = [
     "notes": "Group Strategy War Room: Convert today's deliberations into the 10 sections of the Strategic Planning Matrix."
   },
   {
-    "id": 28,
+    "id": 30,
     "session": "Closing",
     "sessionNum": 15,
     "category": "5:45 \u2013 6:00 PM \u2022 COMMITMENTS & CLOSING",

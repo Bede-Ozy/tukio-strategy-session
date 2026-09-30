@@ -55,6 +55,94 @@ slides = [
         "id": 3,
         "session": "Agenda",
         "sessionNum": 1,
+        "category": "STRATEGY SESSION PLAN • SECTION 2",
+        "title": "Purpose of the Strategy Session",
+        "subtitle": "The Purpose of the Tukio Konsults 2026 Strategy Session",
+        "layout": "purpose-pillars-grid",
+        "thingsToLearn": "A strategy session aligns team identity, analyzes past lessons, and sets a disciplined accountability framework for 2026.",
+        "pillars": [
+            {
+                "letter": "a",
+                "icon": "ri-team-line",
+                "title": "Team & Identity Alignment",
+                "desc": "Strengthen the team's understanding of the company’s identity, operations, values, and direction."
+            },
+            {
+                "letter": "b",
+                "icon": "ri-history-line",
+                "title": "Growth Journey & Lessons",
+                "desc": "Review the company’s growth journey, achievements, lessons, and operational performance."
+            },
+            {
+                "letter": "c",
+                "icon": "ri-compass-3-line",
+                "title": "2026 Strategic Vision",
+                "desc": "Align all team members on the company’s 2026 strategic vision and priorities."
+            },
+            {
+                "letter": "d",
+                "icon": "ri-funds-line",
+                "title": "Actionable Growth Strategies",
+                "desc": "Develop actionable strategies to improve financial sustainability, visibility, client retention, expansion, and staff development."
+            },
+            {
+                "letter": "e",
+                "icon": "ri-user-settings-line",
+                "title": "Roles & Accountability",
+                "desc": "Define clear roles, responsibilities, resource requirements, and accountability systems necessary for successful implementation."
+            },
+            {
+                "letter": "f",
+                "icon": "ri-line-chart-line",
+                "title": "Tracking & Monitoring",
+                "desc": "Establish measurable progress tracking and monitoring mechanisms for organizational growth."
+            }
+        ],
+        "takeaway": "Clarity of purpose drives alignment, execution discipline, and measurable growth.",
+        "notes": "Section 2 of the Strategy Session Plan: Purpose of the Strategy Session (Points a to f)."
+    },
+    {
+        "id": 4,
+        "session": "Agenda",
+        "sessionNum": 1,
+        "category": "STRATEGY SESSION PLAN • SECTION 3",
+        "title": "Objectives & Expected Outcomes",
+        "subtitle": "Defining Our Strategic Intent and Concrete Tangible Deliverables",
+        "layout": "objectives-outcomes-split",
+        "thingsToLearn": "Objectives define our intent today; Expected Outcomes ensure we depart with documented, actionable deliverables.",
+        "objectives": {
+            "title": "Objectives",
+            "subtitle": "The strategy session aims to:",
+            "items": [
+                {"letter": "a", "text": "Improve team alignment and organizational understanding."},
+                {"letter": "b", "text": "Review the company’s operational and strategic performance over previous years."},
+                {"letter": "c", "text": "Clarify and communicate the company’s 2026 vision."},
+                {"letter": "d", "text": "Identify strengths, gaps, opportunities, and growth areas across the organization."},
+                {"letter": "e", "text": "Develop practical strategies and action plans toward achieving organizational goals."},
+                {"letter": "f", "text": "Assign responsibilities and ownership for strategic initiatives."}
+            ]
+        },
+        "outcomes": {
+            "title": "Expected Outcomes",
+            "subtitle": "At the end of the session, the company should have:",
+            "items": [
+                {"letter": "a", "text": "A unified understanding of Tukio Konsults’ mission, vision, operations, and direction."},
+                {"letter": "b", "text": "A documented summary of organizational progress, achievements, and lessons learned."},
+                {"letter": "c", "text": "Clearly defined strategic priorities for 2026."},
+                {"letter": "d", "text": "Actionable implementation strategies for each focus area."},
+                {"letter": "e", "text": "Defined resource requirements for execution."},
+                {"letter": "f", "text": "Assigned responsibilities and accountability structures."},
+                {"letter": "g", "text": "Agreed timelines and measurable success indicators."},
+                {"letter": "h", "text": "A framework for monitoring, evaluation, and follow-up."}
+            ]
+        },
+        "takeaway": "From clear objectives to tangible outcomes: building the institutional foundation of Tukio Konsults.",
+        "notes": "Section 3 of the Strategy Session Plan: Objectives (a to f) and Expected Outcomes (a to h)."
+    },
+    {
+        "id": 5,
+        "session": "Agenda",
+        "sessionNum": 1,
         "category": "8:00 – 8:30 AM • ARRIVAL & WELCOME",
         "title": "Arrival & Welcome Address",
         "subtitle": "Lead: Facilitator / Mrs. Fisayo Olabisi",
@@ -1050,6 +1138,10 @@ slides = [
         "notes": "Final wrap-up, management closing remarks, and group photograph."
     }
 ]
+
+# Ensure perfectly sequential slide IDs
+for idx, s in enumerate(slides, start=1):
+    s["id"] = idx
 
 code = '// Master Slide Dataset for Tukio Konsults Ltd - 2026 Strategy Session\n'
 code += '// Strictly aligned with the Official Lesson Note Plan & Strategy Agenda\n'

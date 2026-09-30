@@ -3748,3 +3748,202 @@ body.is-fullscreen .app-header:hover {
   color: var(--text-muted);
   line-height: 1.35;
 }
+
+/* ==========================================================================
+   SECTION 2: PURPOSE OF STRATEGY SESSION (6 PILLARS GRID)
+   ========================================================================== */
+.purpose-pillars-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.purpose-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  flex: 1;
+  align-content: center;
+}
+
+.purpose-pillar-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.purpose-pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-orange);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.purpose-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.purpose-letter-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 107, 0, 0.15);
+  color: var(--brand-orange);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 107, 0, 0.3);
+}
+
+.purpose-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--brand-blue-hover);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.purpose-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.purpose-card-desc {
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SECTION 3: OBJECTIVES & EXPECTED OUTCOMES (SPLIT 2-COLUMN VIEW)
+   ========================================================================== */
+.objectives-outcomes-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.objectives-outcomes-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex: 1;
+}
+
+.split-col {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-premium);
+}
+
+.split-objectives-col {
+  border-top: 4px solid var(--brand-orange);
+}
+
+.split-outcomes-col {
+  border-top: 4px solid var(--color-success);
+}
+
+.split-col-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.split-header-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 107, 0, 0.15);
+  color: var(--brand-orange);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.split-header-icon.outcome-icon {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+}
+
+.split-col-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.split-col-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.split-col-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.split-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: background 0.2s;
+}
+
+.split-list-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.split-item-letter {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--brand-orange);
+  min-width: 22px;
+}
+
+.out-item .split-item-letter {
+  color: var(--color-success);
+}
+
+.split-item-text {
+  font-size: 1.02rem;
+  line-height: 1.4;
+  color: #E2E8F0;
+}
+

@@ -228,6 +228,12 @@ document.addEventListener("DOMContentLoaded", () => {
       case "compiling-strategy-grid":
         renderCompilingStrategyGrid(slide, containerEl);
         break;
+      case "purpose-pillars-grid":
+        renderPurposePillarsGrid(slide, containerEl);
+        break;
+      case "objectives-outcomes-split":
+        renderObjectivesOutcomesSplit(slide, containerEl);
+        break;
       default:
         renderGenericSlide(slide, containerEl);
         break;
@@ -1079,10 +1085,96 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="compiling-questions-col">
             <div class="compiling-section-heading" style="color: #FBBF24;">
-              <i class="ri-compass-3-line"></i> ...And Then Ask The 4 Questions
+              <i class="ri-compass-3-line"></i> ...And Then Ask The 5 Foundational Questions
             </div>
             <div class="compiling-questions-list">
               ${questionsHtml}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Section 2: Purpose of the Strategy Session (6 Pillars Grid)
+  function renderPurposePillarsGrid(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
+    const pillarsHtml = (slide.pillars || []).map(p => `
+      <div class="purpose-pillar-card">
+        <div class="purpose-card-top">
+          <div class="purpose-letter-badge">${p.letter.toUpperCase()}</div>
+          <div class="purpose-icon-box"><i class="${p.icon}"></i></div>
+        </div>
+        <h4 class="purpose-card-title">${p.title}</h4>
+        <p class="purpose-card-desc">${p.desc}</p>
+      </div>
+    `).join("");
+
+    containerEl.innerHTML = `
+      <div class="purpose-pillars-wrapper">
+        ${learnBannerHtml}
+        <div class="purpose-pillars-grid">
+          ${pillarsHtml}
+        </div>
+      </div>
+    `;
+  }
+
+  // Section 3: Objectives & Expected Outcomes Split (2 Column Comparison)
+  function renderObjectivesOutcomesSplit(slide, containerEl) {
+    const learnBannerHtml = slide.thingsToLearn ? `
+      <div class="slide-things-to-learn-banner">
+        <span class="slide-learn-badge"><i class="ri-lightbulb-line"></i> Things to Learn</span>
+        <span class="slide-learn-text">${slide.thingsToLearn}</span>
+      </div>
+    ` : "";
+
+    const objItems = (slide.objectives?.items || []).map(item => `
+      <div class="split-list-item obj-item">
+        <span class="split-item-letter">${item.letter}.</span>
+        <span class="split-item-text">${item.text}</span>
+      </div>
+    `).join("");
+
+    const outItems = (slide.outcomes?.items || []).map(item => `
+      <div class="split-list-item out-item">
+        <span class="split-item-letter">${item.letter}.</span>
+        <span class="split-item-text">${item.text}</span>
+      </div>
+    `).join("");
+
+    containerEl.innerHTML = `
+      <div class="objectives-outcomes-wrapper">
+        ${learnBannerHtml}
+        <div class="objectives-outcomes-split-grid">
+          <div class="split-col split-objectives-col">
+            <div class="split-col-header">
+              <div class="split-header-icon"><i class="ri-focus-3-line"></i></div>
+              <div>
+                <h3 class="split-col-title">${slide.objectives?.title || "Objectives"}</h3>
+                <p class="split-col-sub">${slide.objectives?.subtitle || "The strategy session aims to:"}</p>
+              </div>
+            </div>
+            <div class="split-col-list">
+              ${objItems}
+            </div>
+          </div>
+          <div class="split-col split-outcomes-col">
+            <div class="split-col-header">
+              <div class="split-header-icon outcome-icon"><i class="ri-checkbox-circle-line"></i></div>
+              <div>
+                <h3 class="split-col-title outcome-title">${slide.outcomes?.title || "Expected Outcomes"}</h3>
+                <p class="split-col-sub">${slide.outcomes?.subtitle || "At the end of the session, the company should have:"}</p>
+              </div>
+            </div>
+            <div class="split-col-list">
+              ${outItems}
             </div>
           </div>
         </div>
